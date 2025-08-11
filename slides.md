@@ -12,7 +12,7 @@ info: |
 
   运行：pnpm dev · 构建：pnpm build
 # apply unocss classes to the current slide
-class: text-center
+class: text-left max-w-[56ch] mx-auto leading-10 space-y-10
 # https://sli.dev/features/drawing
 drawings:
   persist: false
@@ -40,7 +40,7 @@ routerMode: history
 # aspect ratio
 ---
 
-# DeeptoAI Agent实战营
+# DeeptoAI AI实战营
 8 月 2 期 C 班 / 讲师：熊布朗 / 每周 2、4 晚上 8 点
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">

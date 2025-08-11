@@ -40,9 +40,11 @@ class: text-left max-w-[56ch] mx-auto leading-9
 - 多智能体的开发框架
 - Claude Code Cookbook
 
-## 练手项目
+## 个人项目
 
 - 个人博客
 - 滚动图片展示
 - 🇫🇷 创业公司分析
 - ...
+
+## 企业陪跑

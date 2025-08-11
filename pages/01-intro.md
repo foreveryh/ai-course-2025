@@ -1,23 +1,19 @@
 ---
-layout: center
-class: text-left max-w-[56ch] mx-auto leading-9
+layout: section
 ---
+
 # 正课开始
 
 ---
----
-# 开场与引入
+
+# DeeptoAI AI 实战营
 
 ## 第一课 AI 能力与边界
 <p class="text-gray-500 text-2xl mt-2">本课介绍</p>
 
-<v-clicks>
-
-- 本课聚焦于当前最主流的 AI 类型——大语言模型（LLM）及其衍生能力
-- 目标：帮助学员理解 AI 的基础原理、能力圈、边界
+- 本课聚焦于当前最主流的 AI 类型——<span v-mark.circle.green>大语言模型（LLM）</span>及其衍生能力
+- 目标：帮助学员理解 AI 的基础原理、演进过程、<span v-mark.underline.orange>边界</span>
 - 输出：在项目中能判断任务是否在 AI 的能力范围内
-
-</v-clicks>
 
 ---
 
@@ -28,60 +24,57 @@ class: text-left max-w-[56ch] mx-auto leading-9
 <v-clicks>
 
 - 能：文本/代码生成、多模态创作、数据分析、自动化
-- 难：长期记忆、绝对事实、强因果推理、跨长上下文一致性
+- 难：<span v-mark.underline.orange>长期记忆、绝对事实、强因果推理、跨长上下文一致性</span>
 
 </v-clicks>
 
 ---
-
-## 本堂课目标
-
-<v-clicks>
-
-- 了解 LLM（大语言模型） 的本质与工作原理
-- 了解 LLM 推理能力、参数规模、多模态等核心概念
-- 熟悉前沿模型的能力与边界
-- 理解上下文、Token、温度、幻觉等关键限制
-
-</v-clicks>
+layout: section
+---
+# 01 大语言模型基础
 
 ---
-
-# 大语言模型基础
+layout: image-right
+image: public/llmtree.png
+class: text-left max-w-[56ch] mx-auto leading-10 space-y-10
+---
 
 ## 什么是 AI（聚焦 LLM）
-
-<v-clicks>
 
 - AI 范围广：规则系统、传统 ML、深度学习
 - 本课聚焦“大语言模型”（Transformer 架构的生成式模型）
 - 代表：GPT、Claude、Gemini、Qwen 等
 
-</v-clicks>
-
+---
+class: text-left max-w-[56ch] mx-auto leading-10 space-y-10
 ---
 
 ## LLM 的通俗定义
 
-<v-clicks>
-
 - 本质：超大规模的“文字预测机器”
-- 输入文字，逐词预测下一个最可能的词
+- 输入文字，<span v-mark.circle.orange>逐词预测</span>下一个最可能的词
 - 类比：超级输入法，但知识面更广、模式识别更强
 
-</v-clicks>
+> 大语言模型的特别之处，是它用一种叫 Transformer 的架构，把语言理解和生成做到了一个惊人的水平。它不会“真正理解”，但能用概率预测下一步说什么，让你感觉它像在思考。
 
+
+---
+class: text-left max-w-[56ch] mx-auto leading-10 space-y-10
 ---
 
 ## LLM 如何工作
 
-<v-clicks>
-
-- 输入 → Token 化 → 编码（Attention 处理上下文） → 解码生成 Token
+- 输入 → <span v-mark.circle.orange>Token 化</span> → 编码（<span v-mark.underline.orange>Attention 处理上下文</span>） → 解码生成 Token
 - 目标：预测下一个 Token 的概率分布
 - 采样策略与温度控制决定多样性与确定性
 
-</v-clicks>
+> 把你的话拆成小块（Token），用数学方法理解它们之间的关系，然后一次预测一个小块地拼成答案。了解它的流程，不是为了让你写算法，而是为了让你写的提示词更像它喜欢吃的‘拼图’，它才能拼出你想要的画面。
+
+<!--
+- AI 不直接读“汉字”或“英文单词”，而是读数字。
+- Token 就是模型的“最小阅读单位”，可以是一个字、一个词，甚至一个词的一部分（比如“unhappy”会分成 “un” + “happy”）。
+- Token 化是为了让不同语言、符号都能用同一套“字典”表示成数字
+-->
 
 ---
 
@@ -259,8 +252,6 @@ class: text-left max-w-[56ch] mx-auto leading-9
 </v-clicks>
 
 ---
-
-# 技术与实用技巧
 
 ## 训练 vs 推理；微调 vs 提示词
 

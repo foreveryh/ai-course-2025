@@ -62,7 +62,7 @@ layout: default
 class: text-left max-w-[56ch] mx-auto leading-9
 ---
 
-# Week 4 · 目标：理解并构建 AI Agent
+# Week 4 · 目标：构建 AI Agent
 
 ## （4 周太久了，可能会更新）
 
@@ -77,7 +77,7 @@ layout: default
 class: text-left max-w-[56ch] mx-auto leading-9
 ---
 
-# 个人项目（W0 公布统一主题）
+# 个人项目（W1 主题自选）
 
 - 方向示例：微 SaaS、AI 角色、研究/写作助手、自动内容生成器等
 - 产出要求：
