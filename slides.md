@@ -48,6 +48,14 @@ routerMode: history
 </div>
 
 ---
+src: ./pages/instructor-intro.md
+---
+
+---
+src: ./pages/course-intro.md
+---
+
+---
 src: ./pages/01-intro.md
 ---
 

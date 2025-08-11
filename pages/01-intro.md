@@ -1,3 +1,11 @@
+---
+layout: center
+class: text-left max-w-[56ch] mx-auto leading-9
+---
+# 正课开始
+
+---
+---
 # 开场与引入
 
 ## 第一课 AI 能力与边界
@@ -30,8 +38,8 @@
 
 <v-clicks>
 
-- 了解 LLM 的本质与工作原理
-- 掌握推理能力、参数规模、多模态等核心概念
+- 了解 LLM（大语言模型） 的本质与工作原理
+- 了解 LLM 推理能力、参数规模、多模态等核心概念
 - 熟悉前沿模型的能力与边界
 - 理解上下文、Token、温度、幻觉等关键限制
 
@@ -47,7 +55,7 @@
 
 - AI 范围广：规则系统、传统 ML、深度学习
 - 本课聚焦“大语言模型”（Transformer 架构的生成式模型）
-- 代表：GPT-5、Claude、Gemini、Qwen 等
+- 代表：GPT、Claude、Gemini、Qwen 等
 
 </v-clicks>
 
