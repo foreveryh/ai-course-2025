@@ -106,6 +106,33 @@
 * **导出**：推荐浏览器导出 UI（/export）；CLI 结合 `playwright-chromium` 输出 PDF / PPTX（按点击导出 `--with-clicks`）/ PNG / MD。
 * **托管**：`slidev build` 生成 SPA（`--base` 子路径）；提供 GitHub Pages/Netlify/Vercel/Docker 示例。 ([sli.dev][18])
 
+### 3.10 补充资料弹窗（SupplementModal）
+
+* 为了在不跳页的情况下展示成块的补充资料（Markdown），推荐使用通用弹窗组件 `components/SupplementModal.vue`。
+* 将补充资料以 `.md` 文件存放于 `supplements/` 目录，页面中以弹窗方式调用。
+* 支持自定义触发器插槽、`v-model:open`、标题/按钮/尺寸/关闭策略；暗色适配、Esc/点击遮罩关闭。
+
+使用示例：
+
+```vue
+<SupplementModal path="tokenization-examples.md" title="Token 化示例">
+  <template #trigger="{ open }">
+    <button class="px-4 py-2 rounded bg-teal-600 text-white" @click="open()">查看补充资料</button>
+  </template>
+</SupplementModal>
+```
+
+说明：
+
+- `path` 为相对于 `supplements/` 的相对路径，支持多级：如 `llm/attention.md`。
+- 若需要控制外部状态，可使用 `v-model:open`：
+
+```vue
+<SupplementModal v-model:open="isOpen" path="llm/attention.md" title="Attention 讲解" />
+```
+
+注意：交互类弹窗在 PDF/PPTX 导出中不会呈现（仅静态），如需导出可另外提供“静态版”页面或在导出前暂时展开必要内容。
+
 ---
 
 ## 4) 我们这门 AI 课的「Best Practices」
