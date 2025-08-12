@@ -1,0 +1,304 @@
+[
+  {
+    "index": 1,
+    "raw_markdown": "---\nlayout: section\n---\n# 正课开始",
+    "front_matter": {
+      "layout": "section"
+    },
+    "content": "# 正课开始",
+    "has_front_matter": true,
+    "title": "正课开始"
+  },
+  {
+    "index": 2,
+    "raw_markdown": "# DeeptoAI AI 实战营\n\n## 第一课 AI 能力与边界\n<p class=\"text-gray-500 text-2xl mt-2\">本课介绍</p>\n\n- 本课聚焦于当前最主流的 AI 类型——<span v-mark.circle.green>大语言模型（LLM）</span>及其衍生能力\n- 目标：帮助学员理解 AI 的基础原理、演进过程、<span v-mark.underline.orange>边界</span>\n- 输出：在项目中能判断任务是否在 AI 的能力范围内",
+    "front_matter": null,
+    "content": "# DeeptoAI AI 实战营\n\n## 第一课 AI 能力与边界\n<p class=\"text-gray-500 text-2xl mt-2\">本课介绍</p>\n\n- 本课聚焦于当前最主流的 AI 类型——<span v-mark.circle.green>大语言模型（LLM）</span>及其衍生能力\n- 目标：帮助学员理解 AI 的基础原理、演进过程、<span v-mark.underline.orange>边界</span>\n- 输出：在项目中能判断任务是否在 AI 的能力范围内",
+    "has_front_matter": false,
+    "title": "DeeptoAI AI 实战营"
+  },
+  {
+    "index": 3,
+    "raw_markdown": "## 开场提问\n\n当前 AI 到底能做什么？不能做什么？\n\n<v-clicks>\n\n- 能：文本/代码生成、多模态创作、数据分析、自动化\n- 难：<span v-mark.underline.orange>长期记忆、绝对事实、强因果推理、跨长上下文一致性</span>\n\n</v-clicks>",
+    "front_matter": null,
+    "content": "## 开场提问\n\n当前 AI 到底能做什么？不能做什么？\n\n<v-clicks>\n\n- 能：文本/代码生成、多模态创作、数据分析、自动化\n- 难：<span v-mark.underline.orange>长期记忆、绝对事实、强因果推理、跨长上下文一致性</span>\n\n</v-clicks>",
+    "has_front_matter": false,
+    "title": null
+  },
+  {
+    "index": 4,
+    "raw_markdown": "---\nlayout: section\n---\n# 01 大语言模型基础",
+    "front_matter": {
+      "layout": "section"
+    },
+    "content": "# 01 大语言模型基础",
+    "has_front_matter": true,
+    "title": "01 大语言模型基础"
+  },
+  {
+    "index": 5,
+    "raw_markdown": "---\nlayout: image-right\nimage: public/llmtree.png\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-10\n---\n## 什么是 AI（聚焦 LLM）\n\n- AI 范围广：规则系统、传统 ML、深度学习\n- 本课聚焦“大语言模型”（Transformer 架构的生成式模型）\n- 代表：GPT、Claude、Gemini、Qwen 等",
+    "front_matter": {
+      "layout": "image-right",
+      "image": "public/llmtree.png",
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-10"
+    },
+    "content": "## 什么是 AI（聚焦 LLM）\n\n- AI 范围广：规则系统、传统 ML、深度学习\n- 本课聚焦“大语言模型”（Transformer 架构的生成式模型）\n- 代表：GPT、Claude、Gemini、Qwen 等",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 6,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-10\n---\n## LLM 的通俗定义\n\n- 本质：超大规模的“文字预测机器”\n- 输入文字，<span v-mark.circle.orange>逐词预测</span>下一个最可能的词\n- 类比：超级输入法，但知识面更广、模式识别更强\n\n> 大语言模型的特别之处，是它用一种叫 Transformer 的架构，把语言理解和生成做到了一个惊人的水平。它不会“真正理解”，但能用概率预测下一步说什么，让你感觉它像在思考。",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-10"
+    },
+    "content": "## LLM 的通俗定义\n\n- 本质：超大规模的“文字预测机器”\n- 输入文字，<span v-mark.circle.orange>逐词预测</span>下一个最可能的词\n- 类比：超级输入法，但知识面更广、模式识别更强\n\n> 大语言模型的特别之处，是它用一种叫 Transformer 的架构，把语言理解和生成做到了一个惊人的水平。它不会“真正理解”，但能用概率预测下一步说什么，让你感觉它像在思考。",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 7,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-10\n---\n## LLM 如何工作\n\n- 输入 → <span v-mark.circle.orange>Token 化</span> → 编码（<span v-mark.underline.orange>Attention 处理上下文</span>） → 解码生成 Token\n- 目标：预测下一个 Token 的概率分布\n- 采样策略与温度控制决定多样性与确定性\n\n<LLMDetails />\n\n> 把你的话拆成小块（Token），用数学方法理解它们之间的关系，然后一次预测一个小块地拼成答案。了解它的流程，不是为了让你写算法，而是为了让你写的提示词更像它喜欢吃的‘拼图’，它才能拼出你想要的画面。\n\n<!--\n- AI 不直接读“汉字”或“英文单词”，而是读数字。\n- Token 就是模型的“最小阅读单位”，可以是一个字、一个词，甚至一个词的一部分（比如“unhappy”会分成 “un” + “happy”）。\n- Token 化是为了让不同语言、符号都能用同一套“字典”表示成数字\n-->",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-10"
+    },
+    "content": "## LLM 如何工作\n\n- 输入 → <span v-mark.circle.orange>Token 化</span> → 编码（<span v-mark.underline.orange>Attention 处理上下文</span>） → 解码生成 Token\n- 目标：预测下一个 Token 的概率分布\n- 采样策略与温度控制决定多样性与确定性\n\n<LLMDetails />\n\n> 把你的话拆成小块（Token），用数学方法理解它们之间的关系，然后一次预测一个小块地拼成答案。了解它的流程，不是为了让你写算法，而是为了让你写的提示词更像它喜欢吃的‘拼图’，它才能拼出你想要的画面。\n\n<!--\n- AI 不直接读“汉字”或“英文单词”，而是读数字。\n- Token 就是模型的“最小阅读单位”，可以是一个字、一个词，甚至一个词的一部分（比如“unhappy”会分成 “un” + “happy”）。\n- Token 化是为了让不同语言、符号都能用同一套“字典”表示成数字\n-->",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 8,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## Transformer 架构\n\n- 是什么：一种处理序列信息的通用架构，由 Google 于 2017 年提出（“Attention Is All You Need”）；当下主流大语言模型（GPT、Claude、Gemini、Qwen）都基于它。\n- 为什么它成为主流：\n  1. <span v-mark.circle.green>一次看全局</span>：不必逐词顺序处理，可同时关注整段文本\n  2. 擅长捕捉远距离关系\n  3. 并行友好，适配 GPU/TPU，速度快\n  4. 通用性强，可扩展到多模态任务\n  5. 易扩展升级（Scaling Law）\n\n\n<blockquote v-click>\nTransformer 是 AI 的“通用大脑”架构，能够快速、全面地理解并生成各类信息。\n</blockquote>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## Transformer 架构\n\n- 是什么：一种处理序列信息的通用架构，由 Google 于 2017 年提出（“Attention Is All You Need”）；当下主流大语言模型（GPT、Claude、Gemini、Qwen）都基于它。\n- 为什么它成为主流：\n  1. <span v-mark.circle.green>一次看全局</span>：不必逐词顺序处理，可同时关注整段文本\n  2. 擅长捕捉远距离关系\n  3. 并行友好，适配 GPU/TPU，速度快\n  4. 通用性强，可扩展到多模态任务\n  5. 易扩展升级（Scaling Law）\n\n\n<blockquote v-click>\nTransformer 是 AI 的“通用大脑”架构，能够快速、全面地理解并生成各类信息。\n</blockquote>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 9,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 核心机制：Self-Attention\n\n\n- 是什么：在处理某个词时，模型可以“看见”句子中<span v-mark.circle.green>所有其他词</span>，并根据相关性分配不同的注意力权重。\n- 为什么厉害：\n  - 能捕捉长距离依赖（如“巴黎是法国的首都”中，“巴黎”与“法国”强相关）\n  - 支持<span v-mark.circle.green>全局信息整合</span>，一次性理解整段文本\n\n\n<blockquote v-click>\n过去的模型像用手电筒一次只照一个点；Self-Attention 则像打开顶棚灯，一次照亮全场。\n</blockquote>\n\n<div class=\"mt-4\">\n  <SelfAttentionDetails />\n</div>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 核心机制：Self-Attention\n\n\n- 是什么：在处理某个词时，模型可以“看见”句子中<span v-mark.circle.green>所有其他词</span>，并根据相关性分配不同的注意力权重。\n- 为什么厉害：\n  - 能捕捉长距离依赖（如“巴黎是法国的首都”中，“巴黎”与“法国”强相关）\n  - 支持<span v-mark.circle.green>全局信息整合</span>，一次性理解整段文本\n\n\n<blockquote v-click>\n过去的模型像用手电筒一次只照一个点；Self-Attention 则像打开顶棚灯，一次照亮全场。\n</blockquote>\n\n<div class=\"mt-4\">\n  <SelfAttentionDetails />\n</div>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 10,
+    "raw_markdown": "---\nclass: text-left max-w-[1200px] mx-auto leading-10 space-y-8\n---\n## 基于 Transformer的 LLM 的能力边界\n \n<div class=\"grid grid-cols-2 gap-6 items-start leading-7\">\n  <div>\n    <h3 class=\"text-xl font-semibold\">01 上下文记忆有限</h3>\n    <ul class=\"list-disc ml-5 mt-2 space-y-1 text-[1.05rem]\">\n      <li>一次能处理的输入受 <span v-mark.circle.green>Token</span> 窗口限制</li>\n      <li>超过窗口会“遗忘”最早内容（摘要压缩也会丢失细节）</li>\n    </ul>\n  </div>\n  <div>\n    <h3 class=\"text-xl font-semibold\">02 不是绝对事实</h3>\n    <ul class=\"list-disc ml-5 mt-2 space-y-1 text-[1.05rem]\">\n      <li>本质是概率预测，并非权威数据库</li>\n      <li>可能生成 <span v-mark.circle.green>看似合理但不真实</span> 的信息（幻觉）</li>\n    </ul>\n  </div>\n  <div>\n    <h3 class=\"text-xl font-semibold\">03 缺乏长期记忆</h3>\n    <ul class=\"list-disc ml-5 mt-2 space-y-1 text-[1.05rem]\">\n      <li>默认不跨会话保留历史</li>\n      <li>需要外部记忆/检索或重复关键信息</li>\n    </ul>\n  </div>\n  <div>\n    <h3 class=\"text-xl font-semibold\">04 因果推理有限</h3>\n    <ul class=\"list-disc ml-5 mt-2 space-y-1 text-[1.05rem]\">\n      <li>多步严密推理不稳定，易受干扰</li>\n      <li>擅长模式匹配，不等同可验证的逻辑引擎</li>\n    </ul>\n  </div>\n</div>\n\n<blockquote v-click>\n💡 理解这些边界，才能用对方法， 提高自己使用 AI的能力。\n</blockquote>",
+    "front_matter": {
+      "class": "text-left max-w-[1200px] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 基于 Transformer的 LLM 的能力边界\n \n<div class=\"grid grid-cols-2 gap-6 items-start leading-7\">\n  <div>\n    <h3 class=\"text-xl font-semibold\">01 上下文记忆有限</h3>\n    <ul class=\"list-disc ml-5 mt-2 space-y-1 text-[1.05rem]\">\n      <li>一次能处理的输入受 <span v-mark.circle.green>Token</span> 窗口限制</li>\n      <li>超过窗口会“遗忘”最早内容（摘要压缩也会丢失细节）</li>\n    </ul>\n  </div>\n  <div>\n    <h3 class=\"text-xl font-semibold\">02 不是绝对事实</h3>\n    <ul class=\"list-disc ml-5 mt-2 space-y-1 text-[1.05rem]\">\n      <li>本质是概率预测，并非权威数据库</li>\n      <li>可能生成 <span v-mark.circle.green>看似合理但不真实</span> 的信息（幻觉）</li>\n    </ul>\n  </div>\n  <div>\n    <h3 class=\"text-xl font-semibold\">03 缺乏长期记忆</h3>\n    <ul class=\"list-disc ml-5 mt-2 space-y-1 text-[1.05rem]\">\n      <li>默认不跨会话保留历史</li>\n      <li>需要外部记忆/检索或重复关键信息</li>\n    </ul>\n  </div>\n  <div>\n    <h3 class=\"text-xl font-semibold\">04 因果推理有限</h3>\n    <ul class=\"list-disc ml-5 mt-2 space-y-1 text-[1.05rem]\">\n      <li>多步严密推理不稳定，易受干扰</li>\n      <li>擅长模式匹配，不等同可验证的逻辑引擎</li>\n    </ul>\n  </div>\n</div>\n\n<blockquote v-click>\n💡 理解这些边界，才能用对方法， 提高自己使用 AI的能力。\n</blockquote>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 11,
+    "raw_markdown": "---\nlayout: image-right\nimage: 'public/gpt-5-une.jpg'\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 问题 1：为什么感觉 GPT-5 会“思考”？\n\n<v-clicks>\n\n- 本质没变\n  - 依然是 <span v-mark.circle.green>概率预测</span> 的 Transformer 模型\n  - 没有意识、自我意图\n\n- 为什么看起来像在思考\n  1. 推理链（CoT）更长、更稳定\n  2. 接入 <span v-mark.underline.orange>外部工具</span> 和<span v-mark.underline.orange>实时信息</span>\n  3. 记忆与风格一致性更好（跨对话保持连贯）\n\n</v-clicks>\n\n<blockquote v-click>\n“它像一个超级秘书——没有自己的想法，但能快速查资料、整理逻辑，让你觉得它在替你思考。”\n</blockquote>",
+    "front_matter": {
+      "layout": "image-right",
+      "image": "public/gpt-5-une.jpg",
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 问题 1：为什么感觉 GPT-5 会“思考”？\n\n<v-clicks>\n\n- 本质没变\n  - 依然是 <span v-mark.circle.green>概率预测</span> 的 Transformer 模型\n  - 没有意识、自我意图\n\n- 为什么看起来像在思考\n  1. 推理链（CoT）更长、更稳定\n  2. 接入 <span v-mark.underline.orange>外部工具</span> 和<span v-mark.underline.orange>实时信息</span>\n  3. 记忆与风格一致性更好（跨对话保持连贯）\n\n</v-clicks>\n\n<blockquote v-click>\n“它像一个超级秘书——没有自己的想法，但能快速查资料、整理逻辑，让你觉得它在替你思考。”\n</blockquote>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 12,
+    "raw_markdown": "---\nlayout: image-right\nimage: 'public/thinking_model.png'\nbackgroundSize: contain\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 问题 2：模型里的 “Think 模式” 是什么？\n\n<v-clicks>\n\n- 是什么\n  - 模型在回答前，会 <span v-mark.circle.green>先生成内部推理步骤</span>（不直接展示给用户）\n  - 有些厂商提供“可见推理”版本，让用户看到中间思路\n\n- 为什么有用\n  - 更复杂任务可分解成多步\n  - 降低推理出错率\n  - 方便开发者调试模型行为\n\n- 注意点\n  - 显式推理可能泄露模型内部偏差\n  - 推理链本身也是概率生成，不等于真实逻辑\n\n</v-clicks>",
+    "front_matter": {
+      "layout": "image-right",
+      "image": "public/thinking_model.png",
+      "backgroundSize": "contain",
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 问题 2：模型里的 “Think 模式” 是什么？\n\n<v-clicks>\n\n- 是什么\n  - 模型在回答前，会 <span v-mark.circle.green>先生成内部推理步骤</span>（不直接展示给用户）\n  - 有些厂商提供“可见推理”版本，让用户看到中间思路\n\n- 为什么有用\n  - 更复杂任务可分解成多步\n  - 降低推理出错率\n  - 方便开发者调试模型行为\n\n- 注意点\n  - 显式推理可能泄露模型内部偏差\n  - 推理链本身也是概率生成，不等于真实逻辑\n\n</v-clicks>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 13,
+    "raw_markdown": "---\nlayout: image-right\nimage: 'public/LLM-Parameters.webp'\nbackgroundSize: contain\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 问题3：参数（70B?）与能力关系\n\n<v-clicks>\n\n- 参数是什么\n  - 模型中 <span v-mark.circle.green>可学习的权重</span>，类似神经元的连接强度\n  - 单位 “Billion” = 十亿参数\n\n- 规模与能力\n  - Scaling Law：参数多 → 潜在能力强\n  - 需要匹配 <span v-mark.circle.green>高质量数据</span> 和计算资源\n  - 参数过大但训练差，性能未必好\n\n</v-clicks>\n\n<blockquote v-click>\n“更多参数像是更多神经元，但学得好不好，还得看老师、教材和训练时间。”\n</blockquote>",
+    "front_matter": {
+      "layout": "image-right",
+      "image": "public/LLM-Parameters.webp",
+      "backgroundSize": "contain",
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 问题3：参数（70B?）与能力关系\n\n<v-clicks>\n\n- 参数是什么\n  - 模型中 <span v-mark.circle.green>可学习的权重</span>，类似神经元的连接强度\n  - 单位 “Billion” = 十亿参数\n\n- 规模与能力\n  - Scaling Law：参数多 → 潜在能力强\n  - 需要匹配 <span v-mark.circle.green>高质量数据</span> 和计算资源\n  - 参数过大但训练差，性能未必好\n\n</v-clicks>\n\n<blockquote v-click>\n“更多参数像是更多神经元，但学得好不好，还得看老师、教材和训练时间。”\n</blockquote>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 14,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n# 理论太多\n## 那和我们有关系的是！（实践视角）\n\n<v-clicks>\n\n- 上下文管理\n- 温度设置\n- 幻觉防范\n- 推理 vs 训练\n- 工具调用\n\n</v-clicks>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "# 理论太多\n## 那和我们有关系的是！（实践视角）\n\n<v-clicks>\n\n- 上下文管理\n- 温度设置\n- 幻觉防范\n- 推理 vs 训练\n- 工具调用\n\n</v-clicks>",
+    "has_front_matter": true,
+    "title": "理论太多"
+  },
+  {
+    "index": 15,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 上下文（Context）限制与 Token\n\n\n- 上下文窗口大小限制一次能“记住”的信息量（示例：<span v-mark.underline.green>128k tokens</span>）\n- Token 近似：英文 4 字符 / 中文 2~3 字\n- 影响：速度、成本、上下文长度\n\n\n<div class=\"mt-2\">\n  <p class=\"font-semibold\">💡 对使用者的价值</p>\n  <ul class=\"list-disc ml-5 mt-1 space-y-1\">\n    <li>重要信息尽量集中在 <span v-mark.circle.green>一条输入</span> 里，避免关键信息被截断</li>\n    <li>压缩冗余描述，让 Token 留给必要内容</li>\n  </ul>\n  \n</div>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 上下文（Context）限制与 Token\n\n\n- 上下文窗口大小限制一次能“记住”的信息量（示例：<span v-mark.underline.green>128k tokens</span>）\n- Token 近似：英文 4 字符 / 中文 2~3 字\n- 影响：速度、成本、上下文长度\n\n\n<div class=\"mt-2\">\n  <p class=\"font-semibold\">💡 对使用者的价值</p>\n  <ul class=\"list-disc ml-5 mt-1 space-y-1\">\n    <li>重要信息尽量集中在 <span v-mark.circle.green>一条输入</span> 里，避免关键信息被截断</li>\n    <li>压缩冗余描述，让 Token 留给必要内容</li>\n  </ul>\n  \n</div>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 16,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 温度（Temperature）\n\n\n- 高温度：创造性↑、随机性↑\n- 低温度：确定性↑、稳定性↑\n- 任务匹配：写诗 vs 写代码\n\n\n<div class=\"mt-2\">\n  <p class=\"font-semibold\">💡 对使用者的价值</p>\n  <ul class=\"list-disc ml-5 mt-1 space-y-1\">\n    <li>创意写作（广告语、诗歌、脑暴） → 高温度 0.8~1.0</li>\n    <li>严谨任务（代码、合同、数据分析） → <span v-mark.circle.green>低温度</span> 0~0.3</li>\n    <li>现场可用同一 Prompt 对比不同温度输出效果</li>\n  </ul>\n  \n</div>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 温度（Temperature）\n\n\n- 高温度：创造性↑、随机性↑\n- 低温度：确定性↑、稳定性↑\n- 任务匹配：写诗 vs 写代码\n\n\n<div class=\"mt-2\">\n  <p class=\"font-semibold\">💡 对使用者的价值</p>\n  <ul class=\"list-disc ml-5 mt-1 space-y-1\">\n    <li>创意写作（广告语、诗歌、脑暴） → 高温度 0.8~1.0</li>\n    <li>严谨任务（代码、合同、数据分析） → <span v-mark.circle.green>低温度</span> 0~0.3</li>\n    <li>现场可用同一 Prompt 对比不同温度输出效果</li>\n  </ul>\n  \n</div>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 17,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 幻觉（Hallucination）与防范\n\n\n- 成因：生成概率机制导致 <span v-mark.circle.green>“合理但不真实”</span> 的虚构\n- 防范：检索增强、限制领域、工具验证\n\n\n<div class=\"mt-2\">\n  <p class=\"font-semibold\">💡 对使用者的价值</p>\n  <ul class=\"list-disc ml-5 mt-1 space-y-1\">\n    <li>核心事实用搜索或工具验证</li>\n    <li>在提示词中明确要求“如果不确定，请说不知道”</li>\n    <li>尽量提供 <span v-mark.circle.green>具体背景</span>，减少 AI 自由发挥空间</li>\n  </ul>\n  \n</div>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 幻觉（Hallucination）与防范\n\n\n- 成因：生成概率机制导致 <span v-mark.circle.green>“合理但不真实”</span> 的虚构\n- 防范：检索增强、限制领域、工具验证\n\n\n<div class=\"mt-2\">\n  <p class=\"font-semibold\">💡 对使用者的价值</p>\n  <ul class=\"list-disc ml-5 mt-1 space-y-1\">\n    <li>核心事实用搜索或工具验证</li>\n    <li>在提示词中明确要求“如果不确定，请说不知道”</li>\n    <li>尽量提供 <span v-mark.circle.green>具体背景</span>，减少 AI 自由发挥空间</li>\n  </ul>\n  \n</div>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 18,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 训练 vs 推理；微调 vs 提示词\n\n- 训练：让模型学习模式（高成本）\n- 推理：用模型生成结果（日常使用）\n- 微调：更新模型权重；提示词工程：优化输入与过程\n\n\n<div class=\"mt-2\">\n  <p class=\"font-semibold\">💡 对使用者的价值</p>\n  <ul class=\"list-disc ml-5 mt-1 space-y-1\">\n    <li>日常用 AI 是 <span v-mark.circle.green>推理阶段</span> → 成本低、速度快</li>\n    <li>微调成本高，不适合个人 → 个人优化主要靠 <span v-mark.circle.green>写好提示词</span></li>\n  </ul>\n  \n</div>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 训练 vs 推理；微调 vs 提示词\n\n- 训练：让模型学习模式（高成本）\n- 推理：用模型生成结果（日常使用）\n- 微调：更新模型权重；提示词工程：优化输入与过程\n\n\n<div class=\"mt-2\">\n  <p class=\"font-semibold\">💡 对使用者的价值</p>\n  <ul class=\"list-disc ml-5 mt-1 space-y-1\">\n    <li>日常用 AI 是 <span v-mark.circle.green>推理阶段</span> → 成本低、速度快</li>\n    <li>微调成本高，不适合个人 → 个人优化主要靠 <span v-mark.circle.green>写好提示词</span></li>\n  </ul>\n  \n</div>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 19,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 工具调用（Function Calling）\n\n- 可调用外部工具完成任务：搜索、计算器、数据库、代码执行\n- 是实现自动化与多模态的基础能力之一\n\n\n<div class=\"mt-2\">\n  <p class=\"font-semibold\">💡 对使用者的价值</p>\n  <ul class=\"list-disc ml-5 mt-1 space-y-1\">\n    <li>会用带工具调用的 AI（如 ChatGPT + Code Interpreter/搜索）</li>\n    <li>能完成更多任务：自动生成并发送邮件、分析图片、从数据库获取信息</li>\n    <li>大幅扩展 AI 的 <span v-mark.circle.green>实用场景</span></li>\n  </ul>\n  \n</div>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 工具调用（Function Calling）\n\n- 可调用外部工具完成任务：搜索、计算器、数据库、代码执行\n- 是实现自动化与多模态的基础能力之一\n\n\n<div class=\"mt-2\">\n  <p class=\"font-semibold\">💡 对使用者的价值</p>\n  <ul class=\"list-disc ml-5 mt-1 space-y-1\">\n    <li>会用带工具调用的 AI（如 ChatGPT + Code Interpreter/搜索）</li>\n    <li>能完成更多任务：自动生成并发送邮件、分析图片、从数据库获取信息</li>\n    <li>大幅扩展 AI 的 <span v-mark.circle.green>实用场景</span></li>\n  </ul>\n  \n</div>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 20,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n# 扩展：模型类型与多模态\n\n## 单模态 vs 多模态\n\n\n- 单模态：仅处理文本；成本/延迟更低，适合代码、写作、结构化数据问答\n- 多模态：文本 + 图片/音频/视频；适合 OCR、图表/表格理解、UI/场景分析\n- 选择建议：优先尝试将视觉关键信息转成文字再用单模态；确需视觉细节时再启用多模态\n- 实战提醒：多模态上下文编码开销大，应控制分辨率、页数与帧数",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "# 扩展：模型类型与多模态\n\n## 单模态 vs 多模态\n\n\n- 单模态：仅处理文本；成本/延迟更低，适合代码、写作、结构化数据问答\n- 多模态：文本 + 图片/音频/视频；适合 OCR、图表/表格理解、UI/场景分析\n- 选择建议：优先尝试将视觉关键信息转成文字再用单模态；确需视觉细节时再启用多模态\n- 实战提醒：多模态上下文编码开销大，应控制分辨率、页数与帧数",
+    "has_front_matter": true,
+    "title": "扩展：模型类型与多模态"
+  },
+  {
+    "index": 21,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 多模态价值与边界\n\n\n- 价值：图文理解、OCR、图表/表格问答、UI/报表解读、图像生成\n- 边界：小字/模糊文字、跨页一致性、长视频时序、细粒度逻辑仍弱\n- 降低失误：\n  - 先“描述再作答”（先要模型列出看到了什么，再回答问题）\n  - 提供高分辨率或裁剪关键区域，分步提问\n  - 必要时结合检索/工具做事实校验",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 多模态价值与边界\n\n\n- 价值：图文理解、OCR、图表/表格问答、UI/报表解读、图像生成\n- 边界：小字/模糊文字、跨页一致性、长视频时序、细粒度逻辑仍弱\n- 降低失误：\n  - 先“描述再作答”（先要模型列出看到了什么，再回答问题）\n  - 提供高分辨率或裁剪关键区域，分步提问\n  - 必要时结合检索/工具做事实校验",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 22,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 视觉生成模型 vs LLM\n\n\n- 视觉生成（如 Flux、Veo 3）多为扩散/Flow 系列模型，直接输出像素\n- LLM 产出文本；在系统中承担“规划/统筹/解释”的角色\n- 控制手段：提示词 + 参考图（IP-Adapter）、ControlNet、分镜脚本/约束\n- 协作范式：LLM 先生成结构化提示（镜头/主体/光线/风格），再交给生成模型渲染\n\n\n<div class=\"mt-4\">\n  <MultiModalVsTextLLMDetails />\n</div>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 视觉生成模型 vs LLM\n\n\n- 视觉生成（如 Flux、Veo 3）多为扩散/Flow 系列模型，直接输出像素\n- LLM 产出文本；在系统中承担“规划/统筹/解释”的角色\n- 控制手段：提示词 + 参考图（IP-Adapter）、ControlNet、分镜脚本/约束\n- 协作范式：LLM 先生成结构化提示（镜头/主体/光线/风格），再交给生成模型渲染\n\n\n<div class=\"mt-4\">\n  <MultiModalVsTextLLMDetails />\n</div>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 23,
+    "raw_markdown": "---\nlayout: image-right\nimage: 'public/glm4.5v.jpg'\nbackgroundSize: contain\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 多模态趋势与协作\n\n\n- 趋势：文本 → 图文 → 图文音视频一体化；统一 Transformer 处理多模态 Token\n- Agent 化：LLM 依据任务调用 OCR/ASR/检索/执行器，组装成可解释的流水线\n- 实战建议：将复杂任务拆成“文本推理 + 视觉工具子任务”，阶段性产出可验证中间结果",
+    "front_matter": {
+      "layout": "image-right",
+      "image": "public/glm4.5v.jpg",
+      "backgroundSize": "contain",
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 多模态趋势与协作\n\n\n- 趋势：文本 → 图文 → 图文音视频一体化；统一 Transformer 处理多模态 Token\n- Agent 化：LLM 依据任务调用 OCR/ASR/检索/执行器，组装成可解释的流水线\n- 实战建议：将复杂任务拆成“文本推理 + 视觉工具子任务”，阶段性产出可验证中间结果",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 24,
+    "raw_markdown": "---\nlayout: iframe-right\nurl: https://www.trackingai.org/home\n---\n# AI能力与边界案例\n\n## 大语言模型的能力水平\n\n- 基础能力：更强推理、更少幻觉、更广知识、长上下文、安全性\n- 扩展能力：多模态的理解能力、工具调用和 Agent 能力\n\n## 当前能力最强的 5 个模型 （2025.08）\nGPT 5系列、OpenAI o3、Claude Opus4.1、<span v-mark.underline.orange>Gemini 2.5 Pro</span> 和 Grok 4\n\n## Benchmark\n### https://livebench.ai/ （新鲜数据）",
+    "front_matter": {
+      "layout": "iframe-right",
+      "url": "https://www.trackingai.org/home"
+    },
+    "content": "# AI能力与边界案例\n\n## 大语言模型的能力水平\n\n- 基础能力：更强推理、更少幻觉、更广知识、长上下文、安全性\n- 扩展能力：多模态的理解能力、工具调用和 Agent 能力\n\n## 当前能力最强的 5 个模型 （2025.08）\nGPT 5系列、OpenAI o3、Claude Opus4.1、<span v-mark.underline.orange>Gemini 2.5 Pro</span> 和 Grok 4\n\n## Benchmark\n### https://livebench.ai/ （新鲜数据）",
+    "has_front_matter": true,
+    "title": "AI能力与边界案例"
+  },
+  {
+    "index": 25,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-6\n---\n## 我们考验下 LLM\n### 谁能推理出结果\n\n<div class=\"my-6 space-y-4\">\n  <p class=\"text-gray-800\">有一天，一个女孩参加数学考试只得了38分。她心里对父亲的惩罚充满恐惧，于是偷偷把分数改成了88分。她的父亲看到试卷后，怒发冲冠，狠狠地给了她巴掌，怒吼道：\"你这8怎么一半是绿的，一半是红的，你以为我是傻子吗？\"女孩被打后，委屈地哭了起来，什么也没说。</p>\n  \n  <p class=\"text-gray-800\">过了一会儿，父亲突然崩溃了。</p>\n  \n  <p class=\"font-semibold text-blue-600\">请问：这位父亲为什么过一会儿崩溃了？</p>\n  <p class=\"text-sm text-gray-500 italic\">提示：这是逻辑推理题，\"智商\"测试题，而非情感题目。</p>\n</div>\n\n<v-clicks>\n<div class=\"flex items-center gap-2 mb-2\">\n  <button \n    @click=\"copyToClipboard\"\n    class=\"px-3 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded transition-colors\"\n    title=\"复制题目\"\n  >\n    📋 复制题目\n  </button>\n</div>\n\n<script setup>\nconst copyToClipboard = async () => {\n  const text = `有一天，一个女孩参加数学考试只得了38分。她心里对父亲的惩罚充满恐惧，于是偷偷把分数改成了88分。她的父亲看到试卷后，怒发冲冠，狠狠地给了她巴掌，怒吼道：\"你这8怎么一半是绿的，一半是红的，你以为我是傻子吗？\"女孩被打后，委屈地哭了起来，什么也没说。\n\n过了一会儿，父亲突然崩溃了。\n\n请问：这位父亲为什么过一会儿崩溃了？\n提示：这是逻辑推理题，\"智商\"测试题，而非情感题目。`\n  \n  try {\n    await navigator.clipboard.writeText(text)\n    // 可以添加一个简单的提示\n    console.log('题目已复制到剪贴板')\n  } catch (err) {\n    console.error('复制失败:', err)\n  }\n}\n</script>\n\n<span v-mark.underline.orange>从遗传学角度考虑。</span>\n\n</v-clicks>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-6"
+    },
+    "content": "## 我们考验下 LLM\n### 谁能推理出结果\n\n<div class=\"my-6 space-y-4\">\n  <p class=\"text-gray-800\">有一天，一个女孩参加数学考试只得了38分。她心里对父亲的惩罚充满恐惧，于是偷偷把分数改成了88分。她的父亲看到试卷后，怒发冲冠，狠狠地给了她巴掌，怒吼道：\"你这8怎么一半是绿的，一半是红的，你以为我是傻子吗？\"女孩被打后，委屈地哭了起来，什么也没说。</p>\n  \n  <p class=\"text-gray-800\">过了一会儿，父亲突然崩溃了。</p>\n  \n  <p class=\"font-semibold text-blue-600\">请问：这位父亲为什么过一会儿崩溃了？</p>\n  <p class=\"text-sm text-gray-500 italic\">提示：这是逻辑推理题，\"智商\"测试题，而非情感题目。</p>\n</div>\n\n<v-clicks>\n<div class=\"flex items-center gap-2 mb-2\">\n  <button \n    @click=\"copyToClipboard\"\n    class=\"px-3 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded transition-colors\"\n    title=\"复制题目\"\n  >\n    📋 复制题目\n  </button>\n</div>\n\n<script setup>\nconst copyToClipboard = async () => {\n  const text = `有一天，一个女孩参加数学考试只得了38分。她心里对父亲的惩罚充满恐惧，于是偷偷把分数改成了88分。她的父亲看到试卷后，怒发冲冠，狠狠地给了她巴掌，怒吼道：\"你这8怎么一半是绿的，一半是红的，你以为我是傻子吗？\"女孩被打后，委屈地哭了起来，什么也没说。\n\n过了一会儿，父亲突然崩溃了。\n\n请问：这位父亲为什么过一会儿崩溃了？\n提示：这是逻辑推理题，\"智商\"测试题，而非情感题目。`\n  \n  try {\n    await navigator.clipboard.writeText(text)\n    // 可以添加一个简单的提示\n    console.log('题目已复制到剪贴板')\n  } catch (err) {\n    console.error('复制失败:', err)\n  }\n}\n</script>\n\n<span v-mark.underline.orange>从遗传学角度考虑。</span>\n\n</v-clicks>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 26,
+    "raw_markdown": "---\nlayout: image-left\nimage: 'public/image.jpeg'\n---\n## 图片生成的能力与边界\n\n- 能力：超高分辨率、细节丰富、艺术风格\n- 边界：复杂结构易错、逻辑矛盾 prompt 失败、跨图一致性差\n\n## 当前最强的 5 个文生图模型（2025.08）\n\n- Imagen 4(Gemini)\n- 即梦 3.0\n- Flux 1.1 Pro Ultro \n- GPT-5\n- Qwen-Image / Flux Krea Dev （开放权重）",
+    "front_matter": {
+      "layout": "image-left",
+      "image": "public/image.jpeg"
+    },
+    "content": "## 图片生成的能力与边界\n\n- 能力：超高分辨率、细节丰富、艺术风格\n- 边界：复杂结构易错、逻辑矛盾 prompt 失败、跨图一致性差\n\n## 当前最强的 5 个文生图模型（2025.08）\n\n- Imagen 4(Gemini)\n- 即梦 3.0\n- Flux 1.1 Pro Ultro \n- GPT-5\n- Qwen-Image / Flux Krea Dev （开放权重）",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 27,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10\n---\n## 视频生成: 以 Veo3 为例  \n\n- 能力：高保真短视频生成、原生音频\n- 边界：时长限制、成功率不稳定、动作控制精度有限\n- 适配：适合短促视觉表达，不替代长视频制作\n\n### 目前 <span v-mark.underline.orange>Vidu</span> 和 <span v-mark.underline.orange>可灵</span> 是可用性比较好的商业化产品\n\n<div class=\"space-y-4\">\n  <SlidevVideo v-show=\"currentVideo === 1\" controls>\n    <source src=\"/1.mp4\" type=\"video/mp4\" />\n    <p>当前浏览器不支持播放，请点击 <a href=\"/1.mp4\">下载视频</a>。</p>\n  </SlidevVideo>\n\n  <SlidevVideo v-show=\"currentVideo === 2\" controls>\n    <source src=\"/2.mp4\" type=\"video/mp4\" />\n    <p>当前浏览器不支持播放，请点击 <a href=\"/2.mp4\">下载视频</a>。</p>\n  </SlidevVideo>\n\n  <div class=\"flex justify-center mt-4\">\n    <button \n      @click=\"currentVideo = currentVideo === 1 ? 2 : 1\"\n      class=\"px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors\"\n    >\n      {{ currentVideo === 1 ? 'Next' : 'Previous' }}\n    </button>\n  </div>\n</div>\n\n<script setup>\nimport { ref } from 'vue'\nconst currentVideo = ref(1)\n</script>",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10"
+    },
+    "content": "## 视频生成: 以 Veo3 为例  \n\n- 能力：高保真短视频生成、原生音频\n- 边界：时长限制、成功率不稳定、动作控制精度有限\n- 适配：适合短促视觉表达，不替代长视频制作\n\n### 目前 <span v-mark.underline.orange>Vidu</span> 和 <span v-mark.underline.orange>可灵</span> 是可用性比较好的商业化产品\n\n<div class=\"space-y-4\">\n  <SlidevVideo v-show=\"currentVideo === 1\" controls>\n    <source src=\"/1.mp4\" type=\"video/mp4\" />\n    <p>当前浏览器不支持播放，请点击 <a href=\"/1.mp4\">下载视频</a>。</p>\n  </SlidevVideo>\n\n  <SlidevVideo v-show=\"currentVideo === 2\" controls>\n    <source src=\"/2.mp4\" type=\"video/mp4\" />\n    <p>当前浏览器不支持播放，请点击 <a href=\"/2.mp4\">下载视频</a>。</p>\n  </SlidevVideo>\n\n  <div class=\"flex justify-center mt-4\">\n    <button \n      @click=\"currentVideo = currentVideo === 1 ? 2 : 1\"\n      class=\"px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors\"\n    >\n      {{ currentVideo === 1 ? 'Next' : 'Previous' }}\n    </button>\n  </div>\n</div>\n\n<script setup>\nimport { ref } from 'vue'\nconst currentVideo = ref(1)\n</script>",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 28,
+    "raw_markdown": "---\nlayout: iframe-right\nurl: https://elevenlabs.io/text-to-speech\n---\n## 前沿 TTS / 语音克隆\n\n- 能力：多语言、情感语音、秒级样本克隆\n- 边界：长段情绪维持不稳、极端情绪不自然、实时性依赖硬件\n\n## 推荐尝试的 TTS 模型（2025.08）\n\n- 豆包、海螺、ChatTTS （中文）\n- ElevenLabs、Gemini、OpenAI TTS （多语言）",
+    "front_matter": {
+      "layout": "iframe-right",
+      "url": "https://elevenlabs.io/text-to-speech"
+    },
+    "content": "## 前沿 TTS / 语音克隆\n\n- 能力：多语言、情感语音、秒级样本克隆\n- 边界：长段情绪维持不稳、极端情绪不自然、实时性依赖硬件\n\n## 推荐尝试的 TTS 模型（2025.08）\n\n- 豆包、海螺、ChatTTS （中文）\n- ElevenLabs、Gemini、OpenAI TTS （多语言）",
+    "has_front_matter": true,
+    "title": null
+  },
+  {
+    "index": 29,
+    "raw_markdown": "---\nclass: text-left max-w-[56ch] mx-auto leading-10 space-y-8\n---\n## 本课总结与课后任务\n\n<v-clicks>\n\n- 总结：LLM 基础、能力圈、边界与关键限制\n- 下节正课： 讲解提示词和上下文工程\n- 周四实践课： 讲解和体验 [Google AI Studio](https://aistudio.google.com/)\n- 任务： 想一下自己通过本训练营要做一个什么项目\n\n</v-clicks>\n\n<!--\n演讲者笔记：\n- 每页仅 1 个主题，口头扩展细节；穿插 4-6 个演示页。\n- 图片/视频后续替换真实素材，当前为占位。\n-->",
+    "front_matter": {
+      "class": "text-left max-w-[56ch] mx-auto leading-10 space-y-8"
+    },
+    "content": "## 本课总结与课后任务\n\n<v-clicks>\n\n- 总结：LLM 基础、能力圈、边界与关键限制\n- 下节正课： 讲解提示词和上下文工程\n- 周四实践课： 讲解和体验 [Google AI Studio](https://aistudio.google.com/)\n- 任务： 想一下自己通过本训练营要做一个什么项目\n\n</v-clicks>\n\n<!--\n演讲者笔记：\n- 每页仅 1 个主题，口头扩展细节；穿插 4-6 个演示页。\n- 图片/视频后续替换真实素材，当前为占位。\n-->",
+    "has_front_matter": true,
+    "title": null
+  }
+]

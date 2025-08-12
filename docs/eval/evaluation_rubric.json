@@ -1,0 +1,311 @@
+{
+  "rubric_metadata": {
+    "version": "1.0.0",
+    "created_date": "2025-01-27",
+    "framework": "Slidev",
+    "course_type": "AI Course",
+    "scoring_range": {
+      "min": 1,
+      "max": 5,
+      "levels": {
+        "5": "Excellent",
+        "4": "Good",
+        "3": "Satisfactory",
+        "2": "Needs Improvement",
+        "1": "Unsatisfactory"
+      }
+    }
+  },
+  "evaluation_dimensions": [
+    {
+      "id": "content_quality",
+      "name": "内容质量与准确性",
+      "name_en": "Content Quality & Accuracy",
+      "weight": 0.30,
+      "criteria": [
+        {
+          "id": "technical_accuracy",
+          "name": "技术准确性",
+          "checkpoints": [
+            "概念正确性：技术概念、术语使用准确无误",
+            "事实核实：数据、引用、案例真实可靠",
+            "更新性：内容反映最新技术发展状态"
+          ]
+        },
+        {
+          "id": "content_depth",
+          "name": "内容深度",
+          "checkpoints": [
+            "完整性：知识点覆盖全面，无重要遗漏",
+            "层次性：从基础到进阶有合理递进",
+            "适配性：内容难度符合目标受众水平"
+          ]
+        },
+        {
+          "id": "example_quality",
+          "name": "示例质量",
+          "checkpoints": [
+            "相关性：示例贴合主题，具有代表性",
+            "实用性：示例可实际运行或应用",
+            "多样性：涵盖不同场景和用例"
+          ]
+        }
+      ],
+      "scoring_guide": {
+        "5": "技术准确无误，内容深入全面，示例典型实用",
+        "4": "技术基本准确，内容较完整，示例相关有效",
+        "3": "无重大技术错误，内容基本覆盖，示例基本合理",
+        "2": "存在个别技术误差，内容有缺失，示例质量一般",
+        "1": "技术错误较多，内容片面，示例不当或缺失"
+      }
+    },
+    {
+      "id": "structure_flow",
+      "name": "结构与叙事流程",
+      "name_en": "Structure & Narrative Flow",
+      "weight": 0.25,
+      "criteria": [
+        {
+          "id": "information_architecture",
+          "name": "信息架构",
+          "checkpoints": [
+            "逻辑清晰：章节划分合理，层级关系明确",
+            "导航友好：目录、页码、进度指示清晰",
+            "模块化：内容组织便于理解和记忆"
+          ]
+        },
+        {
+          "id": "narrative_rhythm",
+          "name": "叙事节奏",
+          "checkpoints": [
+            "开场引入：有效激发兴趣，明确学习目标",
+            "递进合理：知识点循序渐进，难度梯度适中",
+            "总结回顾：关键点有适时总结和强化"
+          ]
+        },
+        {
+          "id": "transition_coherence",
+          "name": "过渡衔接",
+          "checkpoints": [
+            "页间连贯：页面之间过渡自然流畅",
+            "章节承接：章节转换有明确的引导语",
+            "前后呼应：内容有机联系，形成完整体系"
+          ]
+        }
+      ],
+      "scoring_guide": {
+        "5": "结构清晰完整，叙事流畅自然，节奏把控精准",
+        "4": "结构较清晰，叙事基本流畅，节奏大体合理",
+        "3": "结构基本合理，叙事可以理解，节奏尚可",
+        "2": "结构略显混乱，叙事有跳跃，节奏需调整",
+        "1": "结构混乱，叙事断裂，节奏失控"
+      }
+    },
+    {
+      "id": "visual_consistency",
+      "name": "视觉/布局一致性",
+      "name_en": "Visual/Layout Consistency",
+      "weight": 0.20,
+      "criteria": [
+        {
+          "id": "design_language",
+          "name": "设计语言遵循",
+          "checkpoints": [
+            "颜色系统：符合定义的主色(#6C63FF)、强调色(#00C2A8)等",
+            "字体规范：Inter(正文) + JetBrains Mono(代码)一致应用",
+            "间距网格：标题96px、段落16-20px等规范执行"
+          ]
+        },
+        {
+          "id": "layout_uniformity",
+          "name": "布局统一性",
+          "checkpoints": [
+            "版式一致：同类内容采用相同布局模板",
+            "对齐规范：元素对齐整齐，视觉平衡",
+            "留白适度：内容不拥挤，视觉呼吸感好"
+          ]
+        },
+        {
+          "id": "visual_element_quality",
+          "name": "视觉元素质量",
+          "checkpoints": [
+            "图片清晰：配图分辨率适当，无模糊变形",
+            "图标统一：使用Iconify vscode-icons集合",
+            "代码美观：Shiki主题(min-dark/min-light)正确应用"
+          ]
+        }
+      ],
+      "scoring_guide": {
+        "5": "完全符合设计规范，视觉高度统一，专业美观",
+        "4": "基本符合规范，视觉较统一，整体美观",
+        "3": "大体符合规范，有个别不一致，基本美观",
+        "2": "部分偏离规范，一致性欠佳，美观度一般",
+        "1": "严重偏离规范，缺乏一致性，视觉混乱"
+      }
+    },
+    {
+      "id": "interaction_animation",
+      "name": "交互与动画使用",
+      "name_en": "Interaction & Animation",
+      "weight": 0.15,
+      "criteria": [
+        {
+          "id": "animation_rationality",
+          "name": "动画合理性",
+          "checkpoints": [
+            "v-clicks使用：列表逐项展示，控制信息节奏",
+            "过渡效果：slide-left等过渡自然不突兀",
+            "Magic Move：代码演变流畅，增强理解"
+          ]
+        },
+        {
+          "id": "interactive_features",
+          "name": "交互功能",
+          "checkpoints": [
+            "Monaco编辑器：代码可编辑运行，增强体验",
+            "补充资料弹窗：SupplementModal合理使用",
+            "演示组件：自定义Vue组件提升互动性"
+          ]
+        },
+        {
+          "id": "animation_restraint",
+          "name": "动效克制",
+          "checkpoints": [
+            "数量控制：每页点击不超过5次",
+            "速度适中：动画时长合理，不拖沓",
+            "必要性：动效服务内容，非装饰性"
+          ]
+        }
+      ],
+      "scoring_guide": {
+        "5": "交互丰富有效，动画精准服务内容，体验流畅",
+        "4": "交互功能完善，动画基本合理，体验良好",
+        "3": "有基本交互，动画可接受，体验尚可",
+        "2": "交互较少，动画略显生硬或过度",
+        "1": "缺乏交互，动画混乱或缺失"
+      }
+    },
+    {
+      "id": "teaching_effectiveness",
+      "name": "教学效果/清晰度",
+      "name_en": "Teaching Effectiveness/Clarity",
+      "weight": 0.10,
+      "criteria": [
+        {
+          "id": "concept_explanation",
+          "name": "概念解释",
+          "checkpoints": [
+            "通俗易懂：复杂概念用类比、图解说明",
+            "重点突出：使用v-mark标记关键信息",
+            "层次分明：主次信息视觉区分明显"
+          ]
+        },
+        {
+          "id": "learning_guidance",
+          "name": "学习引导",
+          "checkpoints": [
+            "目标明确：每节开始明确学习目标",
+            "思维引导：通过提问、渐进展示引导思考",
+            "实践导向：提供可操作的实践指导"
+          ]
+        },
+        {
+          "id": "cognitive_load",
+          "name": "认知负荷",
+          "checkpoints": [
+            "信息密度：单页信息量适中，不过载",
+            "焦点控制：一次只呈现一个核心概念",
+            "记忆辅助：关键点有视觉强化和总结"
+          ]
+        }
+      ],
+      "scoring_guide": {
+        "5": "概念解释极清晰，学习路径优化，认知负荷低",
+        "4": "概念解释清晰，有学习引导，认知负荷合理",
+        "3": "概念基本清楚，引导一般，认知负荷可接受",
+        "2": "概念略显模糊，引导不足，认知负荷较高",
+        "1": "概念不清，缺乏引导，认知负荷过高"
+      }
+    }
+  ],
+  "design_specifications": {
+    "colors": {
+      "primary": "#6C63FF",
+      "accent": "#00C2A8",
+      "ink": "#111827",
+      "muted": "#6B7280",
+      "background_light": "#F7F7FB",
+      "background_dark": "#0B1020"
+    },
+    "fonts": {
+      "sans": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "spacing": {
+      "title_vertical": "96px",
+      "paragraph_line_height": "16-20px"
+    },
+    "animations": {
+      "transition": "slide-left",
+      "max_clicks_per_slide": 5,
+      "preferred_effects": ["v-clicks", "v-motion", "magic-move"]
+    }
+  },
+  "checklist": {
+    "must_have": [
+      "技术内容准确无误",
+      "结构逻辑清晰",
+      "符合基本设计规范",
+      "关键概念有解释",
+      "可正常演示运行"
+    ],
+    "should_have": [
+      "交互组件增强体验",
+      "动画辅助理解",
+      "示例代码可运行",
+      "视觉设计精美",
+      "补充资料完善"
+    ],
+    "nice_to_have": [
+      "创新的交互设计",
+      "自定义Vue组件",
+      "AI Demo集成",
+      "多模态内容",
+      "响应式适配"
+    ]
+  },
+  "evaluation_templates": {
+    "single_slide": {
+      "fields": [
+        "page_number",
+        "title",
+        "content_quality_score",
+        "content_quality_comments",
+        "structure_flow_score",
+        "structure_flow_comments",
+        "visual_consistency_score",
+        "visual_consistency_comments",
+        "interaction_animation_score",
+        "interaction_animation_comments",
+        "teaching_effectiveness_score",
+        "teaching_effectiveness_comments",
+        "overall_score",
+        "improvement_suggestions"
+      ]
+    },
+    "overall_deck": {
+      "fields": [
+        "course_name",
+        "total_pages",
+        "evaluation_date",
+        "evaluator_name",
+        "dimension_scores",
+        "weighted_total",
+        "strengths",
+        "issues",
+        "recommendations",
+        "overall_assessment"
+      ]
+    }
+  }
+}

@@ -426,23 +426,26 @@ url: https://www.trackingai.org/home
 - 基础能力：更强推理、更少幻觉、更广知识、长上下文、安全性
 - 扩展能力：多模态的理解能力、工具调用和 Agent 能力
 
-## 当前能力最强的 5 个模型
+## 当前能力最强的 5 个模型 （2025.08）
 GPT 5系列、OpenAI o3、Claude Opus4.1、<span v-mark.underline.orange>Gemini 2.5 Pro</span> 和 Grok 4
 
 ## Benchmark
 ### https://livebench.ai/ （新鲜数据）
 
 ---
+class: text-left max-w-[56ch] mx-auto leading-10 space-y-6
 ---
-# 我们考验下 LLM
-## 谁能推理出结果
+## 我们考验下 LLM
+### 谁能推理出结果
 
-有一天，一个女孩参加数学考试只得了38分。她心里对父亲的惩罚充满恐惧，于是偷偷把分数改成了88分。她的父亲看到试卷后，怒发冲冠，狠狠地给了她巴掌，怒吼道：“你这8怎么一半是绿的，一半是红的，你以为我是傻子吗？”女孩被打后，委屈地哭了起来，什么也没说。
-
-过了一会儿，父亲突然崩溃了。
-
-请问：这位父亲为什么过一会儿崩溃了？
-提示：这是逻辑推理题，“智商”测试题，而非情感题目。
+<div class="my-6 space-y-4">
+  <p class="text-gray-800">有一天，一个女孩参加数学考试只得了38分。她心里对父亲的惩罚充满恐惧，于是偷偷把分数改成了88分。她的父亲看到试卷后，怒发冲冠，狠狠地给了她巴掌，怒吼道："你这8怎么一半是绿的，一半是红的，你以为我是傻子吗？"女孩被打后，委屈地哭了起来，什么也没说。</p>
+  
+  <p class="text-gray-800">过了一会儿，父亲突然崩溃了。</p>
+  
+  <p class="font-semibold text-blue-600">请问：这位父亲为什么过一会儿崩溃了？</p>
+  <p class="text-sm text-gray-500 italic">提示：这是逻辑推理题，"智商"测试题，而非情感题目。</p>
+</div>
 
 <v-clicks>
 <div class="flex items-center gap-2 mb-2">
@@ -478,55 +481,89 @@ const copyToClipboard = async () => {
 
 </v-clicks>
 
+
+---
+layout: image-left
+image: 'public/image.jpeg'
 ---
 
-## Google Veo 3 
+## 图片生成的能力与边界
 
-<v-clicks>
+- 能力：超高分辨率、细节丰富、艺术风格
+- 边界：复杂结构易错、逻辑矛盾 prompt 失败、跨图一致性差
+
+## 当前最强的 5 个文生图模型（2025.08）
+
+- Imagen 4(Gemini)
+- 即梦 3.0
+- Flux 1.1 Pro Ultro 
+- GPT-5
+- Qwen-Image / Flux Krea Dev （开放权重）
+
+---
+class: text-left max-w-[56ch] mx-auto leading-10
+---
+## 视频生成: 以 Veo3 为例  
 
 - 能力：高保真短视频生成、原生音频
 - 边界：时长限制、成功率不稳定、动作控制精度有限
 - 适配：适合短促视觉表达，不替代长视频制作
 
-</v-clicks>
+### 目前 <span v-mark.underline.orange>Vidu</span> 和 <span v-mark.underline.orange>可灵</span> 是可用性比较好的商业化产品
+
+<div class="space-y-4">
+  <SlidevVideo v-show="currentVideo === 1" controls>
+    <source src="/1.mp4" type="video/mp4" />
+    <p>当前浏览器不支持播放，请点击 <a href="/1.mp4">下载视频</a>。</p>
+  </SlidevVideo>
+
+  <SlidevVideo v-show="currentVideo === 2" controls>
+    <source src="/2.mp4" type="video/mp4" />
+    <p>当前浏览器不支持播放，请点击 <a href="/2.mp4">下载视频</a>。</p>
+  </SlidevVideo>
+
+  <div class="flex justify-center mt-4">
+    <button 
+      @click="currentVideo = currentVideo === 1 ? 2 : 1"
+      class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+    >
+      {{ currentVideo === 1 ? 'Next' : 'Previous' }}
+    </button>
+  </div>
+</div>
+
+<script setup>
+import { ref } from 'vue'
+const currentVideo = ref(1)
+</script>
+
 
 ---
-
-## Flux 1.1 Pro Ultra 的能力与边界
-
-<v-clicks>
-
-- 能力：超高分辨率、细节丰富、艺术风格
-- 边界：复杂结构易错、逻辑矛盾 prompt 失败、跨图一致性差
-
-</v-clicks>
-
+layout: iframe-right
+url: https://elevenlabs.io/text-to-speech
 ---
 
 ## 前沿 TTS / 语音克隆
 
-<v-clicks>
-
 - 能力：多语言、情感语音、秒级样本克隆
 - 边界：长段情绪维持不稳、极端情绪不自然、实时性依赖硬件
 
-</v-clicks>
+## 推荐尝试的 TTS 模型（2025.08）
+
+- 豆包、海螺、ChatTTS （中文）
+- ElevenLabs、Gemini、OpenAI TTS （多语言）
 
 ---
-
-## 能力圈与边界总结图（占位）
-
-- 占位：四象限图（文本 / 图像 / 视频 / 音频）
-- 标注每象限“当前上限”和“主要短板”
-
+class: text-left max-w-[56ch] mx-auto leading-10 space-y-8
 ---
-
 ## 本课总结与课后任务
 
 <v-clicks>
 
 - 总结：LLM 基础、能力圈、边界与关键限制
-- 任务：选择一个模型，用 prompt 挑战它的边界并分享结果
+- 下节正课： 讲解提示词和上下文工程
+- 周四实践课： 讲解和体验 [Google AI Studio](https://aistudio.google.com/)
+- 任务： 想一下自己通过本训练营要做一个什么项目
 
 </v-clicks>
 
