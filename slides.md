@@ -2,7 +2,7 @@
 # 主题设置 - 使用官方 seriph 主题
 theme: seriph
 # 背景图片 - 建议替换为自定义背景
-background: /cover-bg.jpg
+background: https://cover.sli.dev
 backgroundSize: cover
 # 课程元信息
 title: DeeptoAI AI 实战营 · 8月2期
