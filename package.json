@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build pages/01-intro.md",
+    "build": "slidev build pages/01-intro.md && cp -r public/* pages/dist/",
     "dev": "slidev pages/01-intro.md --open",
     "export": "slidev export pages/01-intro.md"
   },
