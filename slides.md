@@ -54,13 +54,6 @@ aspectRatio: 16/9          # 宽高比
 # canvasWidth: 980           # 画布宽度
 
   
-# 导出配置
-export:
-  format: pdf
-  timeout: 60000
-  dark: false
-  withClicks: false
-  
 # 其他配置
 remoteAssets: true         # 远程资源
 selectable: true           # 文本可选

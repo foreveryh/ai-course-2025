@@ -3,9 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build slides.md && cp -r public/* dist/",
+    "build": "slidev build slides.md --out dist || true && cp -r public/* dist/",
     "dev": "slidev slides.md --open",
-    "export": "slidev export slides.md"
+    "export": "slidev build slides.md --format pdf --out dist"
   },
   "dependencies": {
     "@slidev/cli": "^52.1.0",
