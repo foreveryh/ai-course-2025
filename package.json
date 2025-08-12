@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build slides.md --out dist || true && cp -r public/* dist/",
+    "build": "NODE_ENV=production slidev build slides.md --out dist --base ./ && cp -r public/* dist/ || cp -r public/* dist/",
     "dev": "slidev slides.md --open",
     "export": "slidev build slides.md --format pdf --out dist"
   },

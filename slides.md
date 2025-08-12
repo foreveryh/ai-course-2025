@@ -60,6 +60,10 @@ selectable: true           # 文本可选
 record: dev               # 录制模式
 contextMenu: true         # 右键菜单
 wakeLock: true           # 防止休眠
+
+# 构建配置 - 禁用 PDF 导出
+download: false           # 禁用 PDF 下载
+export: false            # 禁用导出功能
 ---
 
 # DeeptoAI AI 实战营
