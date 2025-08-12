@@ -44,9 +44,12 @@ npx vite preview --outDir dist
 ### 导出 PDF
 
 ```bash
-# 导出为 PDF
+# 导出为 PDF（需要安装 Playwright）
+npm i -D playwright-chromium
 npm run export
 ```
+
+**注意**: PDF 导出功能需要 Playwright，在 CI/CD 环境中可能会遇到问题。生产部署只需要 SPA 构建即可。
 
 ## 📁 项目结构
 
@@ -148,9 +151,177 @@ transition: slide-left  # 页面过渡
 - 完整的设计系统和组件库
 - 响应式断点和暗色模式支持
 
+## 🚀 部署指南
+
+### Vercel 部署（推荐）
+
+1. **准备工作**
+   ```bash
+   # 确保项目可以本地构建
+   npm run build
+   ```
+
+2. **Vercel 配置**
+   - 项目已包含 `vercel.json` 配置文件
+   - 支持 SPA 路由和静态资源服务
+   ```json
+   {
+     "rewrites": [
+       { "source": "/(.*)", "destination": "/index.html" }
+     ]
+   }
+   ```
+
+3. **自动部署**
+   - 连接 GitHub 仓库到 Vercel
+   - 每次推送到 `main` 分支自动部署
+   - 构建命令：`npm run build`
+   - 输出目录：`dist`
+
+### 其他部署平台
+
+- **Netlify**: 使用 `netlify.toml` 配置
+- **GitHub Pages**: 参考 `.github/workflows/deploy.yml`
+- **自定义服务器**: 使用任何静态文件服务器
+
+## 🔧 故障排除
+
+### 常见问题
+
+#### 1. 白屏问题
+**症状**: 部署后页面显示空白
+**原因**: SPA 路由配置问题或静态资源加载失败
+**解决方案**:
+```bash
+# 检查构建输出
+npm run build
+# 查看 dist/ 目录是否包含所有必要文件
+ls -la dist/
+# 本地测试构建结果
+npx vite preview --outDir dist
+```
+
+#### 2. JavaScript 模块加载失败
+**症状**: "Expected a JavaScript module script but the server responded with MIME type 'text/html'"
+**原因**: 服务器配置问题，静态资源请求被重定向到 index.html
+**解决方案**: 确保使用正确的 `vercel.json` 配置
+
+#### 3. 图片/视频资源 404
+**症状**: 静态资源无法加载
+**原因**: public 目录文件未被正确复制
+**解决方案**: 
+- 检查 `slidev.config.ts` 中的 `publicDir` 配置
+- 确认 `public/` 目录结构正确
+- 使用相对路径引用资源：`/image.png`
+
+#### 4. Playwright 错误
+**症状**: 构建时出现 Playwright 相关错误
+**原因**: PDF 导出功能尝试运行但缺少依赖
+**解决方案**: 
+```yaml
+# 在 slides.md 中禁用导出功能
+---
+export: false
+download: false
+---
+```
+
+### 调试技巧
+
+1. **本地验证**
+   ```bash
+   # 清理并重新构建
+   rm -rf dist node_modules/.vite
+   npm install
+   npm run build
+   
+   # 本地预览
+   npx vite preview --outDir dist --port 4173
+   ```
+
+2. **检查构建输出**
+   ```bash
+   # 确认所有必要文件都在 dist/ 目录中
+   tree dist/
+   # 或者
+   find dist -type f -name "*.html" -o -name "*.js" -o -name "*.css" | head -20
+   ```
+
+3. **浏览器调试**
+   - 打开开发者工具 (F12)
+   - 查看 Console 面板的错误信息
+   - 检查 Network 面板的资源加载状态
+   - 查看 Sources 面板确认文件结构
+
+## 💡 开发最佳实践
+
+### 内容组织
+
+1. **模块化结构**
+   - 将长幻灯片拆分为多个 `.md` 文件
+   - 使用 `src: ./pages/filename.md` 引入子模块
+   - 保持每个文件专注于单一主题
+
+2. **静态资源管理**
+   - 所有图片、视频放在 `public/` 目录
+   - 使用描述性文件名：`ai-architecture-overview.png`
+   - 优化资源大小，视频建议 < 10MB
+   - 使用 WebP 格式图片提升加载速度
+
+3. **代码示例**
+   ```markdown
+   ```js {2,3|5-7|all}
+   // 使用行高亮展示代码重点
+   const model = 'gpt-4'
+   const prompt = 'Explain AI concepts'
+   
+   const response = await openai.chat.completions.create({
+     model, messages: [{ role: 'user', content: prompt }]
+   })
+   ```
+   ```
+
+### 演示技巧
+
+1. **渐进式展示**
+   ```markdown
+   - 第一个要点
+   - 第二个要点 <!-- v-click -->
+   - 第三个要点 <!-- v-click -->
+   ```
+
+2. **交互组件**
+   - 使用 `<v-clicks>` 包装需要分步展示的内容
+   - 添加 `<VClicks>` 组件实现复杂交互
+   - 利用 `@click` 事件处理自定义交互
+
+3. **多媒体内容**
+   ```markdown
+   <video controls width="100%">
+     <source src="/demo-video.mp4" type="video/mp4">
+   </video>
+   ```
+
+### 性能优化
+
+- ✅ 压缩图片和视频文件
+- ✅ 使用 CDN 托管大文件
+- ✅ 启用浏览器缓存
+- ✅ 预加载关键资源
+- ✅ 使用现代图片格式（WebP、AVIF）
+
+### 可访问性
+
+- ✅ 为图片添加 `alt` 属性
+- ✅ 使用语义化 HTML 结构
+- ✅ 确保足够的颜色对比度
+- ✅ 支持键盘导航
+- ✅ 提供文字版本说明
+
 ## 📚 相关链接
 
 - 📖 [Slidev 官方文档](https://sli.dev)
+- 🚀 [Slidev 部署指南](https://sli.dev/guide/hosting)
 - 🎨 [主题文档](https://github.com/slidevjs/themes)
 - 💻 [课程代码仓库](https://github.com/foreveryh/ai-course-2025)
 - 🔗 [在线访问](https://ai-course-2025.vercel.app)
