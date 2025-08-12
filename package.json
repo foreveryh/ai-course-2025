@@ -3,9 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
-    "dev": "slidev --open",
-    "export": "slidev export"
+    "build": "slidev build pages/01-intro.md",
+    "dev": "slidev pages/01-intro.md --open",
+    "export": "slidev export pages/01-intro.md"
   },
   "dependencies": {
     "@slidev/cli": "^52.1.0",
