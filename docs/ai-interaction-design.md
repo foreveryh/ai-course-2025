@@ -127,6 +127,46 @@ shiki: {
 - 强调关键数字: `<span v-mark.circle.red>95%</span>`
 - 对比差异: `<span v-mark.box.green>新方法</span>`
 
+#### 模态组件使用指南：
+
+**ModalDetails（通用模态）**：
+```vue
+<ModalDetails
+  title="详细说明"
+  :maxWidth="'800px'"
+  :open="open"
+  @update:open="val => (open = val)"
+>
+  <template #trigger="{ open }">
+    <button @click="open()" class="px-4 py-2 bg-blue-500 text-white rounded">
+      查看详情
+    </button>
+  </template>
+  <div class="space-y-4">
+    <!-- 模态内容 -->
+  </div>
+</ModalDetails>
+```
+
+**专用模态组件**（推荐用于固定内容）：
+```vue
+<!-- 需要在页面顶部导入 -->
+<script setup>
+import CustomerServiceTemplateModal from '../components/CustomerServiceTemplateModal.vue'
+import CopywritingTemplateModal from '../components/CopywritingTemplateModal.vue'
+</script>
+
+<!-- 直接使用 -->
+<CustomerServiceTemplateModal />
+<CopywritingTemplateModal />
+```
+
+**创建新的专用模态组件**：
+1. 参考 `CustomerServiceTemplateModal.vue` 的结构
+2. 使用 ModalDetails 作为基础组件
+3. 硬编码具体内容，确保稳定性
+4. 遵循组件命名规范：`[功能名]TemplateModal.vue`
+
 #### 自定义组件规范：
 - 组件放置: `components/` 目录
 - 命名规则: PascalCase，如 `AIDemo.vue`
@@ -180,6 +220,22 @@ npm run dev -- --remote
 - 字体子集: 只包含使用的字符
 - 压缩配置: 启用 gzip 和 brotli
 
+### 🧩 现有组件库
+
+**模态组件**：
+- `ModalDetails.vue` - 通用模态框组件
+- `CustomerServiceTemplateModal.vue` - 客服分类模板
+- `CopywritingTemplateModal.vue` - 文案风格模板
+- `MultiModalVsTextLLMDetails.vue` - 多模态对比详情
+
+**其他组件**：
+- `SupplementModal.vue` - 补充资料弹窗（基于 import.meta.glob）
+
+**使用建议**：
+- 固定内容推荐创建专用组件（参考 `CustomerServiceTemplateModal.vue`）
+- 动态内容使用通用 `ModalDetails`
+- 补充文档使用 `SupplementModal`
+
 ### 📋 质量检查清单
 
 发布前检查：
@@ -187,6 +243,7 @@ npm run dev -- --remote
 - [ ] 代码块语法高亮正确
 - [ ] 动画时序合理流畅
 - [ ] 演讲者笔记完整
+- [ ] 模态组件导入正确且功能正常
 - [ ] 导出 PDF 测试通过
 - [ ] 深色模式显示正常
 - [ ] 移动端基本可读

@@ -106,32 +106,52 @@
 * **导出**：推荐浏览器导出 UI（/export）；CLI 结合 `playwright-chromium` 输出 PDF / PPTX（按点击导出 `--with-clicks`）/ PNG / MD。
 * **托管**：`slidev build` 生成 SPA（`--base` 子路径）；提供 GitHub Pages/Netlify/Vercel/Docker 示例。 ([sli.dev][18])
 
-### 3.10 补充资料弹窗（SupplementModal）
+### 3.10 模态弹窗组件（ModalDetails 与专用组件）
 
-* 为了在不跳页的情况下展示成块的补充资料（Markdown），推荐使用通用弹窗组件 `components/SupplementModal.vue`。
-* 将补充资料以 `.md` 文件存放于 `supplements/` 目录，页面中以弹窗方式调用。
+* 为了在不跳页的情况下展示成块的补充资料或模板内容，使用模态弹窗组件。
+* 推荐两种使用方式：通用 ModalDetails 组件和专用模态组件。
 * 支持自定义触发器插槽、`v-model:open`、标题/按钮/尺寸/关闭策略；暗色适配、Esc/点击遮罩关闭。
 
-使用示例：
+**通用 ModalDetails 使用示例**：
 
 ```vue
-<SupplementModal path="tokenization-examples.md" title="Token 化示例">
+<ModalDetails
+  title="详细说明"
+  :maxWidth="'800px'"
+  :open="open"
+  @update:open="val => (open = val)"
+>
   <template #trigger="{ open }">
-    <button class="px-4 py-2 rounded bg-teal-600 text-white" @click="open()">查看补充资料</button>
+    <button @click="open()" class="px-4 py-2 bg-blue-500 text-white rounded">
+      查看详情
+    </button>
   </template>
-</SupplementModal>
+  <div class="space-y-4">
+    <!-- 具体内容 -->
+  </div>
+</ModalDetails>
 ```
 
-说明：
-
-- `path` 为相对于 `supplements/` 的相对路径，支持多级：如 `llm/attention.md`。
-- 若需要控制外部状态，可使用 `v-model:open`：
+**专用模态组件使用示例**：
 
 ```vue
-<SupplementModal v-model:open="isOpen" path="llm/attention.md" title="Attention 讲解" />
+<!-- 页面顶部导入 -->
+<script setup>
+import CustomerServiceTemplateModal from '../components/CustomerServiceTemplateModal.vue'
+import CopywritingTemplateModal from '../components/CopywritingTemplateModal.vue'
+</script>
+
+<!-- 直接使用 -->
+<CustomerServiceTemplateModal />
+<CopywritingTemplateModal />
 ```
 
-注意：交互类弹窗在 PDF/PPTX 导出中不会呈现（仅静态），如需导出可另外提供“静态版”页面或在导出前暂时展开必要内容。
+**创建新的专用模态组件**：
+1. 参考现有的 `CustomerServiceTemplateModal.vue` 结构
+2. 使用 ModalDetails 作为基础，硬编码具体内容
+3. 命名规范：`[功能名]TemplateModal.vue`
+
+注意：交互类弹窗在 PDF/PPTX 导出中不会呈现（仅静态），如需导出可另外提供"静态版"页面或在导出前暂时展开必要内容。
 
 ---
 
