@@ -99,6 +99,57 @@ export: false            # 禁用导出功能
 -->
 
 ---
+layout: center
+class: text-center
+---
+
+# 📚 课程导航
+
+<div class="grid grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
+
+<div @click="$slidev.nav.next()" class="group cursor-pointer p-6 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-4xl mb-4">👨‍🏫</div>
+  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary">讲师介绍</h3>
+  <p class="text-gray-600 text-sm">了解您的 AI 导师背景与经验</p>
+  <div class="text-xs text-gray-400 mt-2">页面 3+</div>
+</div>
+
+<div @click="$slidev.nav.go($slidev.nav.currentPage + 4)" class="group cursor-pointer p-6 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-4xl mb-4">🎯</div>
+  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary">课程介绍</h3>
+  <p class="text-gray-600 text-sm">课程目标、受众与整体安排</p>
+  <div class="text-xs text-gray-400 mt-2">跳转到课程介绍</div>
+</div>
+
+<div @click="$slidev.nav.go($slidev.nav.currentPage + 22)" class="group cursor-pointer p-6 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-4xl mb-4">🧠</div>
+  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary">第一课：AI能力与边界</h3>
+  <p class="text-gray-600 text-sm">认知重塑与技术底层原理</p>
+  <div class="text-xs text-gray-400 mt-2">跳转到第一课</div>
+</div>
+
+<div @click="$slidev.nav.go($slidev.nav.currentPage + 52)" class="group cursor-pointer p-6 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-4xl mb-4">⚡</div>
+  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary">第二课：上下文工程实战</h3>
+  <p class="text-gray-600 text-sm">提示词工程与实战演练</p>
+  <div class="text-xs text-gray-400 mt-2">跳转到第二课</div>
+</div>
+
+</div>
+
+<div class="mt-8 text-sm text-gray-500 space-y-2">
+<p>💡 点击任意模块开始学习，或使用键盘导航</p>
+<p class="text-xs">⌨️ 快捷键：<kbd class="px-2 py-1 bg-gray-200 rounded">→</kbd> 下一页 | <kbd class="px-2 py-1 bg-gray-200 rounded">←</kbd> 上一页 | <kbd class="px-2 py-1 bg-gray-200 rounded">Home</kbd> 首页</p>
+</div>
+
+<!--
+演讲者笔记：
+- 根据课程进度选择对应模块
+- 可以跳转到任意章节开始讲课
+- 建议按顺序进行完整课程
+-->
+
+---
 src: ./pages/instructor-intro.md
 ---
 
@@ -108,6 +159,10 @@ src: ./pages/course-intro.md
 
 ---
 src: ./pages/01-intro.md
+---
+
+---
+src: ./pages/02-context-engineering.md
 ---
 
 ---
