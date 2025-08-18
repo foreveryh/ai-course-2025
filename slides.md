@@ -1,6 +1,6 @@
 ---
 # 主题设置 - 使用官方 seriph 主题
-theme: seriph
+theme: Seriph
 # 背景图片 - 建议替换为自定义背景
 background: https://cover.sli.dev
 backgroundSize: cover
@@ -50,7 +50,7 @@ fonts:
 # 视觉与行为
 colorSchema: auto           # 颜色方案
 routerMode: history         # 路由模式
-aspectRatio: 16/9          # 宽高比
+# aspectRatio: 16/9          # 宽高比
 # canvasWidth: 980           # 画布宽度
 
   

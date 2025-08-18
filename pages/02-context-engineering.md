@@ -69,11 +69,12 @@ layout: section
 class: text-center
 ---
 
-# 🚨 AI Agent 的现实困境
+# 🚨 当前 AI Agent 的现实困境
 
 ---
 layout: two-cols
 layoutClass: gap-8
+class: text-left max-w-[60ch] mx-auto leading-8 space-y-8
 ---
 
 ## 📈 表面现象 vs 实际问题
@@ -131,64 +132,126 @@ class: text-center
 </div>
 
 ---
-layout: two-cols
-layoutClass: gap-6
+layout: section
+class: text-center
 ---
 
-## 🎯 指导性上下文 & 📚 信息性上下文
+# 🧠 三类上下文深度解析
+
+---
+class: text-left max-w-[70ch] mx-auto leading-8 space-y-6
+---
+
+## 🎯 指导性上下文 *Instructional Context*
 
 <v-clicks>
-
-### 🎯 指导性上下文 *Instructional Context*
 
 **作用**：告诉模型"做什么"和"怎么做"
 
-**包含**：系统提示词、任务描述、少样本示例、输出格式定义、角色设定
+**包含**：
+* 系统提示词
+* 任务描述与指令
+* 少样本示例
+* 输出格式定义
+* 角色设定与人格指令
 
-<div class="p-3 bg-blue-50 rounded mt-4">
-💡 <strong>提示词工程主要优化这一类</strong>
+<div class="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400 mt-6">
+💡 <strong>核心要点</strong>：提示词工程主要聚焦于优化这一类上下文，通过指令设计提升输出质量
 </div>
 
-### 📚 信息性上下文 *Informational Context*
-
-**作用**：告诉模型"需要知道什么知识"
-
-**包含**：RAG 检索内容、短期/长期记忆、思考本/草稿空间、外部知识库、历史对话记录
-
-<div class="p-3 bg-green-50 rounded mt-4">
-🔍 提供解决问题所需的<strong>事实、数据与知识</strong>
-</div>
+**常见应用**：
+* 精细的指令设计（如"分步分析"）
+* 角色扮演与人格定制
+* 输出格式化控制
+* 任务拆解与顺序指导
 
 </v-clicks>
 
-::right::
+---
+class: text-left max-w-[70ch] mx-auto leading-8 space-y-6
+---
 
-## ⚡ 行动性上下文
+## 📚 信息性上下文 *Informational Context*
 
 <v-clicks>
 
-### ⚡ 行动性上下文 *Actionable Context*
+**作用**：告诉模型"需要知道什么知识"
+
+**包含**：
+* RAG 检索内容
+* 短期/长期记忆系统
+* 思考本/草稿空间
+* 外部知识库集成
+* 历史对话记录与摘要
+
+<div class="p-4 bg-green-50 rounded-lg border-l-4 border-green-400 mt-6">
+🔍 <strong>核心要点</strong>：提供解决问题所需的<strong>事实、数据与知识</strong>，是克服模型幻觉的关键
+</div>
+
+**常见应用**：
+* 文档检索增强生成（RAG）
+* 向量数据库存储与检索
+* 长期记忆管理系统
+* 会话上下文管理
+* 专业知识库集成
+
+</v-clicks>
+
+---
+class: text-left max-w-[70ch] mx-auto leading-8 space-y-6
+---
+
+## ⚡ 行动性上下文 *Actionable Context*
+
+<v-clicks>
 
 **作用**：告诉模型"能做什么"及"做了之后的结果"
 
 **包含**：
-* 工具定义
-* API 接口描述
+* 工具定义与描述
+* API 接口文档
 * 工具调用结果
 * 环境状态反馈
-* 权限边界
+* 权限边界描述
 
-<div class="p-3 bg-purple-50 rounded mt-4">
-🛠️ 提供与外部世界<strong>交互的能力</strong>
+<div class="p-4 bg-purple-50 rounded-lg border-l-4 border-purple-400 mt-6">
+🛠️ <strong>核心要点</strong>：提供与外部世界<strong>交互的能力</strong>，使模型从"思考者"变为"行动者"
 </div>
 
-### 📋 上下文类型小结
+**常见应用**：
+* 函数调用系统
+* 插件与工具集成
+* Agent行为体系设计
+* 环境交互控制
+* 反馈循环机制
 
-<div class="p-3 bg-gray-50 rounded mt-4">
-**指导性** → 怎么做<br>
-**信息性** → 知道什么<br>  
-**行动性** → 能做什么
+</v-clicks>
+
+---
+class: text-left max-w-[70ch] mx-auto leading-8 space-y-6
+---
+
+## 📋 三类上下文综合分析
+
+<v-clicks>
+
+**整体框架**：
+
+<div class="p-4 bg-gray-50 rounded-lg border mt-4 text-center">
+<span class="font-bold text-blue-600">指导性</span> → 怎么做<br>
+<span class="font-bold text-green-600">信息性</span> → 知道什么<br>  
+<span class="font-bold text-purple-600">行动性</span> → 能做什么
 </div>
+
+**组合优势**：
+* 三类上下文相互补充，缺一不可
+* 不同任务对三种上下文的需求比例不同
+* 高级应用需要综合协调三类上下文
+
+**管理难度**：
+* 指导性：较易（用户可直接编写）
+* 信息性：中等（需要检索与存储系统）
+* 行动性：较难（需要系统集成与安全控制）
 
 </v-clicks>
 
@@ -413,11 +476,6 @@ class: text-left max-w-[70ch] mx-auto leading-8 space-y-6
 
 ## 💡 对普通用户的现实考量
 
-<div v-click class="p-6 bg-blue-50 rounded-lg border-l-4 border-blue-400 mb-6">
-<h3 class="text-lg font-semibold mb-3">🎯 明确受众与操作界面</h3>
-<p>本课程面向直接使用 <strong>ChatGPT、Claude.ai 等聊天界面</strong>，而非通过 API 进行编程的普通用户</p>
-</div>
-
 <div v-click>
 <h3 class="text-xl font-semibold mb-4">🚧 普通用户在"上下文工程"操作上的局限性</h3>
 
@@ -456,7 +514,6 @@ class: text-left max-w-[70ch] mx-auto leading-8 space-y-6
 </div>
 
 <div v-click class="mt-8 p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border">
-<h3 class="text-lg font-semibold mb-2">⚡ 关键结论</h3>
 <p class="text-base">这些高级的"上下文工程"策略需要编程能力和系统级控制，超出了普通用户的操作范围</p>
 </div>
 
@@ -490,14 +547,21 @@ class: text-left max-w-[70ch] mx-auto leading-8 space-y-6
 **工程属性**：体现在**试错与迭代**的持续过程中，如同拥有一个"重启"按钮，能够从零开始不断尝试和设计不同的提示
 </div>
 
-<div v-click class="mt-6">
-<h3 class="text-xl font-semibold mb-4">🌉 "模拟"上下文工程的核心策略</h3>
+---
+class: text-left max-w-[70ch] mx-auto leading-8 space-y-6
+---
 
+## 🌉 "模拟"上下文工程的核心策略
+
+<div v-click>
+<p class="mb-4">
 虽然普通用户无法直接控制系统级的上下文工程，但可以通过提示词技巧来"模拟"或"引导"：
+</p>
 
 <div class="grid grid-cols-2 gap-6 mt-4">
 
 <div class="space-y-3">
+
 **📝 模拟"写入"**
 * 在对话中明确建立工作空间
 * 要求模型"记住"关键信息
@@ -510,6 +574,7 @@ class: text-left max-w-[70ch] mx-auto leading-8 space-y-6
 </div>
 
 <div class="space-y-3">
+
 **🗜️ 模拟"压缩"**
 * 要求模型提供摘要或要点
 * 使用分层次的信息组织
@@ -534,7 +599,7 @@ layout: section
 class: text-center
 ---
 
-# Part 2: 提示词工程五大核心技巧
+# Part 2: 提示词工程八大核心技巧
 从混乱到精准（40分钟）
 
 ---
@@ -632,9 +697,8 @@ class: text-center
 </div>
 
 ---
-layout: image-right
-image: /placeholder-context.png
-class: text-left
+layout: two-cols
+layoutClass: gap-6
 ---
 
 ## 技巧② 提供充足上下文
@@ -649,19 +713,22 @@ class: text-left
 * 约束条件和限制
 * 参考资料和来源
 
-</v-clicks>
+<div class="mt-6">
 
-<div v-click class="mt-6">
+### 📝 高级提示
 
-### 📝 模板结构
-
+<div class="p-3 bg-blue-50 rounded">
+💡 <strong>现代模型很聪明：</strong>可以直接给它完整论文，无需预先总结！
+</div>
 </div>
 
----
-class: text-left max-w-[70ch] mx-auto
----
+</v-clicks>
 
-## 上下文模板
+::right::
+
+<div v-click>
+
+## 上下文模板示例
 
 ```markdown
 ### 任务
@@ -681,8 +748,10 @@ class: text-left max-w-[70ch] mx-auto
 - 风格：[正式/友好/技术性]
 ```
 
-<div v-click class="mt-6 p-4 bg-blue-50 rounded-lg">
-💡 <strong>现代模型很聪明：</strong>可以直接给它完整论文，无需预先总结！
+<div class="mt-6 p-3 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border">
+**使用场景示例：** 产品分析、市场调研报告、学术论文摘要、数据解读等信息密集型任务
+</div>
+
 </div>
 
 ---
@@ -827,6 +896,180 @@ layoutClass: gap-6
 </div>
 
 ---
+layout: image-right
+image: /placeholder-context.png
+class: text-left
+---
+
+## 技巧⑥ 设定模型角色
+
+<v-clicks>
+
+**定义：** 为模型分配特定角色或身份，引导其生成特定风格和专业度的内容
+
+**关键优势：**
+* 输出语气和视角一致
+* 提供特定领域专业知识
+* 增强回答的针对性
+
+**优秀实践：**
+* 选择与任务相关的角色
+* 提供角色的背景和特征
+* "诚实"设定（直接告诉模型真实目的）
+
+</v-clicks>
+
+<div v-click class="mt-6">
+
+### 📝 角色设定示例
+
+```markdown
+你是一名拥有10年经验的产品经理，
+专注于B端SaaS产品设计。你擅长
+将复杂功能简化为用户友好的体验。
+```
+
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-8
+---
+
+## 技巧⑦ 正面指令优于负面约束
+
+<v-clicks>
+
+**核心理念：** 告诉模型"做什么"，而非"不要做什么"
+
+**原因：**
+* 负面指令可能引起反效果
+* 正面指令更明确具体
+* 提供明确替代方案更有效
+
+**示例对比：**
+
+❌ 不要使用复杂术语和长句
+
+✅ 使用简单日常用语和短句，确保12岁孩子也能理解
+
+</v-clicks>
+
+::right::
+
+<div v-click>
+
+### 🔄 指令改写示例
+
+**安全类指令：**
+
+❌ 不要询问用户个人敏感信息
+✅ 引导用户访问官方安全渠道：`help.example.com/verify`
+
+**风格类指令：**
+
+❌ 不要啰嗦，不要解释太多
+✅ 保持简洁，每个要点不超过20字
+
+**内容类指令：**
+
+❌ 不要使用英文缩写
+✅ 使用完整的中文术语表达，必要时附加英文全称
+
+</div>
+
+---
+layout: image-right
+image: /placeholder-intent.png
+class: text-left
+---
+
+## 技巧⑧ 迭代优化提示词
+
+<v-clicks>
+
+**核心方法：** 反复试验和调整，直到达到理想输出
+
+**关键步骤：**
+* 仔细阅读模型的完整输出
+* 向模型询问改进建议
+* 尝试不同的表述方式
+* 调整参数（温度、上下文等）
+* 测试边缘情况和异常输入
+
+</v-clicks>
+
+<div v-click class="mt-6">
+
+### 💡 高效迭代技巧
+
+**自我诊断问题：**
+```markdown
+我的提示词哪里可以改进？请分析并
+给出3个具体修改建议，以获得更准确
+的结果。
+```
+
+**向模型求助：**
+```markdown
+请帮我优化这个提示词，使其更清晰、
+具体且易于理解。
+```
+
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# 八大核心技巧总览
+
+<div class="grid grid-cols-4 gap-6 mt-8 text-left max-w-6xl mx-auto">
+
+<div class="p-4 border rounded-lg bg-blue-50">
+<h3 class="text-lg font-bold mb-2">① 明确任务目标</h3>
+<p class="text-sm">动词+对象+受众+标准，具体量化，避免模糊表达</p>
+</div>
+
+<div class="p-4 border rounded-lg bg-green-50">
+<h3 class="text-lg font-bold mb-2">② 提供充足上下文</h3>
+<p class="text-sm">背景信息、事实数据、术语定义和约束条件</p>
+</div>
+
+<div class="p-4 border rounded-lg bg-yellow-50">
+<h3 class="text-lg font-bold mb-2">③ 约束输出格式</h3>
+<p class="text-sm">明确表格、JSON、结构化文本等格式要求</p>
+</div>
+
+<div class="p-4 border rounded-lg bg-purple-50">
+<h3 class="text-lg font-bold mb-2">④ 少样本示例</h3>
+<p class="text-sm">提供2-5个输入输出示例，对齐格式与风格</p>
+</div>
+
+<div class="p-4 border rounded-lg bg-red-50">
+<h3 class="text-lg font-bold mb-2">⑤ 链式思维</h3>
+<p class="text-sm">让模型分步推理，展示思考过程，提高准确性</p>
+</div>
+
+<div class="p-4 border rounded-lg bg-indigo-50">
+<h3 class="text-lg font-bold mb-2">⑥ 设定模型角色</h3>
+<p class="text-sm">为模型指定特定身份，使输出风格和专业度一致</p>
+</div>
+
+<div class="p-4 border rounded-lg bg-teal-50">
+<h3 class="text-lg font-bold mb-2">⑦ 正面指令优先</h3>
+<p class="text-sm">告诉模型"做什么"，而非"不要做什么"</p>
+</div>
+
+<div class="p-4 border rounded-lg bg-amber-50">
+<h3 class="text-lg font-bold mb-2">⑧ 迭代优化</h3>
+<p class="text-sm">不断试验、分析和调整，直到达到理想效果</p>
+</div>
+
+</div>
+
+---
 layout: section  
 class: text-center
 ---
@@ -937,42 +1180,131 @@ class: text-left max-w-[70ch] mx-auto
 </div>
 
 ---
-layout: two-cols
-layoutClass: gap-8
+layout: section
+class: text-center
 ---
 
-## 🛠️ 常见问题速修指南
+# 高级技巧：AI辅助提示词
+
+---
+class: text-left max-w-[80ch] mx-auto
+---
+
+## 🧠 利用AI优化提示词（元提示）
 
 <v-clicks>
 
-**问题类型 → 解决方案**
+**核心思想：** 让AI帮你设计更好的提示词，由简到繁迭代提升
 
-* 输出太长 → 加字数限制+要点式
-* 格式混乱 → 指定结构+示例
-* 内容空泛 → 要求具体数据+案例  
-* 风格不稳 → 角色设定+参考示例
-* 经常幻觉 → 加"不确定条款"
-* 理解偏差 → 补充背景+术语定义
+**优势：**
+* 无需记忆复杂的提示词结构
+* 快速生成专业水准的提示词
+* 适合各种水平的用户（初学者尤其适用）
+* 创建复杂的定制模板
+
+**示例用法：**
+
+```markdown
+我需要写一个提示词，要求AI帮我分析一家创业公司的商业计划书。
+请帮我设计一个详细的提示词模板，包括：
+1. 合适的角色设定
+2. 分析需要涵盖的关键维度
+3. 思维链提示
+4. 输出格式要求
+```
 
 </v-clicks>
 
-::right::
+<div v-click class="mt-6 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+<h3 class="font-bold mb-1">💡 高级应用：持续改进</h3>
+<p>当你获得AI生成的提示词后，可以进一步要求模型:</p>
+<ul class="list-disc pl-5 mt-2 space-y-1 text-sm">
+<li>分析这个提示词可能的缺陷</li>
+<li>为这个提示词添加更多细节和约束</li>
+<li>针对特定场景进行定制化修改</li>
+</ul>
+</div>
 
-<div v-click>
+---
+layout: center
+class: text-center
+---
 
-## ⚙️ 参数调节技巧
+# ⚙️ 实用工具箱
 
-**温度设置：**
-* **0-0.3** → 事实性任务（翻译、提取）
-* **0.7-1.0** → 创意任务（写作、头脑风暴）
+<div class="grid grid-cols-2 gap-12 mt-8 text-left max-w-5xl mx-auto">
 
-**长度控制：**
-* 设定具体数字而非"简洁点"
-* 使用"不超过X字"而非"尽量短"
+<div>
+<h2 class="text-xl font-bold mb-4 text-center">🛠️ 常见问题速修指南</h2>
 
-**停止条件：**
-* "完成以上3项即停止"
-* "不要添加额外延伸"
+<div class="space-y-3">
+<div class="p-3 border-l-4 border-red-400 bg-red-50 rounded">
+<p><strong>输出太长</strong> → 加字数限制 + 要点式结构</p>
+</div>
+
+<div class="p-3 border-l-4 border-blue-400 bg-blue-50 rounded">
+<p><strong>格式混乱</strong> → 指定结构 + 提供格式示例</p>
+</div>
+
+<div class="p-3 border-l-4 border-green-400 bg-green-50 rounded">
+<p><strong>内容空泛</strong> → 要求具体数据 + 案例支持</p>
+</div>
+
+<div class="p-3 border-l-4 border-purple-400 bg-purple-50 rounded">
+<p><strong>风格不稳</strong> → 角色设定 + 少样本参考</p>
+</div>
+
+<div class="p-3 border-l-4 border-yellow-400 bg-yellow-50 rounded">
+<p><strong>经常幻觉</strong> → 加"不确定条款" + 信息来源</p>
+</div>
+
+<div class="p-3 border-l-4 border-indigo-400 bg-indigo-50 rounded">
+<p><strong>理解偏差</strong> → 补充背景 + 术语明确定义</p>
+</div>
+</div>
+</div>
+
+<div>
+<h2 class="text-xl font-bold mb-4 text-center">⚛️ 参数调节技巧</h2>
+
+<div class="space-y-6 p-5 bg-gray-50 rounded-lg">
+
+<div>
+<h3 class="font-bold border-b pb-1">温度 (Temperature)：</h3>
+<p class="mt-2 text-sm">控制模型输出的随机性与创造性</p>
+<div class="grid grid-cols-2 mt-2 text-sm gap-2">
+<div class="p-2 bg-blue-50 rounded">
+<strong>0-0.3</strong>：事实型任务<br>
+翻译、数据提取、代码生成
+</div>
+<div class="p-2 bg-red-50 rounded">
+<strong>0.7-1.0</strong>：创意型任务<br>
+写作、头脑风暴、创意构思
+</div>
+</div>
+</div>
+
+<div>
+<h3 class="font-bold border-b pb-1">长度控制：</h3>
+<p class="mt-2 text-sm">明确的数量限制比模糊表述更有效</p>
+<div class="p-2 bg-green-50 rounded mt-2 text-sm">
+<strong>✅ 有效：</strong>"以300-500字概括"<br>
+<strong>✅ 有效：</strong>"列出精确5点建议"<br>
+<strong>❌ 无效：</strong>"简洁一点"、"尽量短"
+</div>
+</div>
+
+<div>
+<h3 class="font-bold border-b pb-1">停止条件：</h3>
+<p class="mt-2 text-sm">明确告知模型何时结束输出</p>
+<div class="p-2 bg-purple-50 rounded mt-2 text-sm">
+<strong>示例：</strong>"完成以上3项后停止"<br>
+<strong>示例：</strong>"不要添加额外延伸内容"
+</div>
+</div>
+
+</div>
+</div>
 
 </div>
 
@@ -1155,7 +1487,7 @@ class: text-center
 <div v-click>
 
 ## 🛠️ 实践技巧掌握
-**五大核心技巧：** 明确目标 → 充足上下文 → 格式约束 → 少样本示例 → 链式思维
+**八大核心技巧：** 明确目标 → 充足上下文 → 格式约束 → 少样本示例 → 链式思维 → 设定角色 → 正面指令 → 迭代优化
 <br>**工程思维：** 清晰沟通 + 持续迭代 + 系统性优化
 
 </div>
@@ -1171,10 +1503,11 @@ class: text-center
 
 <div v-click>
 
-## 📚 持续学习路径
-* **理论深化**：关注上下文工程、多智能体系统发展
-* **实践迭代**：在日常工作中持续优化提示词，积累经验
-* **技术跟进**：关注最新模型能力，调整交互策略
+## 📚 实践是最佳学习路径
+* **实践出真知**：理论理解只是开始，真正掌握需要持续实践
+* **边用边学**：每次与AI互动都是一次学习机会
+* **记录经验**：建立个人提示词模板库，持续改进
+* **分享交流**：向同事展示优化后的结果，讨论改进方法
 
 </div>
 
@@ -1182,16 +1515,18 @@ class: text-center
 
 ## 📝 课后实践任务
 1. **选择具体场景**：工作中的重复性AI交互任务
-2. **应用五大技巧**：系统性改进现有提示词
-3. **记录对比效果**：优化前后的输出质量差异
-4. **反思与迭代**：总结适合自己工作的提示词模式
+2. **应用八大技巧**：系统性改进现有提示词
+3. **构建模板库**：根据业务需求创建提示词模板集
+4. **记录对比效果**：优化前后的输出质量差异
+5. **反思与迭代**：总结适合自己工作的提示词模式
 
 </div>
 
 <div v-click>
 
-## 🔗 持续改进
-提示词是"产品"，需要像产品一样打磨优化
+## 🔗 持续成长
+提示词工程是一门随模型能力不断发展的技能
+<br>保持学习心态，在实践中逐步提升熟练度
 
 </div>
 
@@ -1203,13 +1538,3 @@ class: text-center
 ---
 
 # 感谢参与！
-
-## 🔗 延伸资源
-
-* **课件文件：** 可下载打印速查清单
-* **模板库：** 所有示例代码可直接复制使用  
-* **讨论群：** 后续问题欢迎继续交流
-
-<div class="mt-8 text-lg font-semibold">
-下节课预告：<strong>AI工具链整合与实战项目</strong>
-</div>
