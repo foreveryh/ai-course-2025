@@ -1,0 +1,24 @@
+# Vercel ignore file - exclude unnecessary files from deployment
+
+# Development files
+.git/
+.cursor/
+.windsurf/
+node_modules/
+dist/
+.DS_Store
+
+# Documentation and development docs
+docs/
+pm_docs/
+supplements/
+README.md
+CLAUDE.md
+GEMINI.md
+
+# Development scripts
+slide_summary.py
+snippets/
+
+# Backup files
+pages/*-backup-*.md

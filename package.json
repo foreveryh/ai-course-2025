@@ -3,7 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build slides.md || echo 'Slidev build completed with warnings but SPA is ready'",
+    "build": "slidev build slides.md --base ./ --out dist",
+    "build:vercel": "slidev build slides.md --base ./ --out dist --download false",
     "dev": "slidev slides.md --open",
     "export": "slidev build slides.md --format pdf --out dist"
   },
