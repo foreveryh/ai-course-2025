@@ -3,8 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build slides.md --base ./ --out dist",
-    "build:vercel": "NODE_ENV=production slidev build slides.md --base ./ --out dist --download false",
+    "build": "slidev build",
     "dev": "slidev slides.md --open",
     "export": "echo 'PDF export disabled for Vercel compatibility'"
   },
