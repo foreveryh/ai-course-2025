@@ -163,9 +163,9 @@ src: ./pages/course-intro.md
 src: ./pages/01-intro.md
 ---
 
----
-src: ./pages/02-context-engineering.md
----
+# ---
+# src: ./pages/02-context-engineering.md
+# ---
 
 <!-- 完全移除了对策略页面的引用，因为HTML标签嵌套问题导致构建错误 -->
 <!-- 占位注释，确保布局不被破坏 -->
