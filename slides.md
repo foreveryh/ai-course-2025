@@ -1,6 +1,6 @@
 ---
 # 主题设置 - 使用官方 seriph 主题
-theme: Seriph
+theme: default
 css: ./styles/custom.css
 pageNum: true
 # 背景图片 - 建议替换为自定义背景

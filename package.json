@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build slides-minimal.md || (echo 'Slidev build completed with warnings but SPA is ready' && exit 0)",
+    "build": "slidev build slides.md || (echo 'Slidev build completed with warnings but SPA is ready' && exit 0)",
     "build:full": "slidev build slides.md || (echo 'Slidev build completed with warnings but SPA is ready' && exit 0)",
     "dev": "slidev slides.md --open",
     "export": "echo 'PDF export disabled for Vercel compatibility'"
