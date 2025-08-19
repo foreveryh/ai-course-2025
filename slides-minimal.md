@@ -1,6 +1,6 @@
 ---
-theme: default
-title: Test Minimal Slidev
+theme: Seriph
+title: Test Seriph Theme
 export: false
 download: false
 ---
