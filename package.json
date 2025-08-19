@@ -6,7 +6,7 @@
     "build": "slidev build slides.md --base ./ --out dist",
     "build:vercel": "NODE_ENV=production slidev build slides.md --base ./ --out dist --download false",
     "dev": "slidev slides.md --open",
-    "export": "slidev build slides.md --format pdf --out dist"
+    "export": "echo 'PDF export disabled for Vercel compatibility'"
   },
   "dependencies": {
     "@slidev/cli": "^52.1.0",
