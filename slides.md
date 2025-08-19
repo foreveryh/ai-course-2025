@@ -1,6 +1,8 @@
 ---
 # 主题设置 - 使用官方 seriph 主题
 theme: Seriph
+css: ./styles/custom.css
+pageNum: true
 # 背景图片 - 建议替换为自定义背景
 background: https://cover.sli.dev
 backgroundSize: cover
@@ -164,6 +166,9 @@ src: ./pages/01-intro.md
 ---
 src: ./pages/02-context-engineering.md
 ---
+
+<!-- 完全移除了对策略页面的引用，因为HTML标签嵌套问题导致构建错误 -->
+<!-- 占位注释，确保布局不被破坏 -->
 
 ---
 layout: center
