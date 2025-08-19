@@ -1,0 +1,24 @@
+/* 允许幻灯片页面高度自动扩展，并启用滚动 */
+.slidev-layout {
+  height: auto !important;
+  min-height: 100vh;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  padding-bottom: 2rem;
+}
+
+/* 确保内容在幻灯片中可见 */
+.slidev-page {
+  overflow: visible !important;
+}
+
+/* 优化两栏布局的滚动 */
+.slidev-layout .slidev-layout-grid {
+  min-height: calc(100vh - 4rem);
+  overflow: visible;
+}
+
+/* 确保内容正确显示 */
+.slidev-vclick-target {
+  overflow: visible;
+}

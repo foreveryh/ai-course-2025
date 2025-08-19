@@ -1,0 +1,26 @@
+/* 提高选择器优先级，确保覆盖主题默认样式 */
+/* 让所有幻灯片都可滚动，而不只是有特定类的幻灯片 */
+.slidev-layout,
+.slidev-layout .slidev-page-container {
+  height: auto !important;
+  min-height: 100vh;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  padding-bottom: 2rem;
+}
+
+/* 确保内容在幻灯片中可见 */
+.slidev-page {
+  overflow: visible !important;
+}
+
+/* 优化两栏布局的滚动 */
+.slidev-layout .slidev-layout-grid {
+  min-height: calc(100vh - 4rem);
+  overflow: visible;
+}
+
+/* 确保内容正确显示 */
+.slidev-vclick-target {
+  overflow: visible;
+}
