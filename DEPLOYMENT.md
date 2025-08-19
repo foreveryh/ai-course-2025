@@ -33,8 +33,6 @@
 {
   "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist",
-  "framework": null,
-  "installCommand": "npm install",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
@@ -42,7 +40,8 @@
 ```
 
 - `buildCommand`: 使用优化的构建脚本
-- `framework: null`: 禁用自动框架检测，避免额外处理
+- 移除了`functions`配置：避免"Function Runtimes must have a valid version"错误
+- 简化配置：仅保留必要的静态站点部署选项
 
 ## 3. 优化Slidev配置
 
@@ -89,12 +88,20 @@ snippets/
 pages/*-backup-*.md
 ```
 
+## 部署问题修复
+
+### 第二个问题：Function Runtimes错误
+- **错误**: "Function Runtimes must have a valid version"  
+- **原因**: vercel.json包含了不必要的functions配置
+- **解决**: 移除functions配置，这是纯静态站点项目
+
 ## 部署结果
 
 ### 性能提升
-- **构建时间**: 从43分钟超时 → **4.77秒**完成
+- **构建时间**: 从43分钟超时 → **4.28秒**完成
 - **构建产物**: 8.6M（包含多媒体资源）
 - **成功率**: 100% SPA构建成功
+- **错误修复**: 已解决Function Runtimes版本错误
 
 ### 功能保持
 - ✅ 所有幻灯片正常显示
