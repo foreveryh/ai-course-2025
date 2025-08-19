@@ -4,13 +4,11 @@ class: text-left max-w-[56ch] mx-auto leading-10 space-y-6
 ---
 
 <script setup>
-import CustomerServiceTemplateModal from '../components/CustomerServiceTemplateModal.vue'
-import CopywritingTemplateModal from '../components/CopywritingTemplateModal.vue'
+// 仅引入实际使用的组件，减少构建复杂度
 import ContextStrategies from '../components/ContextStrategies.vue'
 import PromptingPracticeModal from '../components/PromptingPracticeModal.vue'
 import CoTExampleModal from '../components/CoTExampleModal.vue'
 import NegativeConstraintsModal from '../components/NegativeConstraintsModal.vue'
-import ModalDetails from '../components/ModalDetails.vue'
 </script>
 
 # 上下文工程与提示词实战
