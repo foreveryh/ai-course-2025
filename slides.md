@@ -137,6 +137,13 @@ class: text-center
   <div class="text-xs text-gray-400 mt-2">跳转到第二课</div>
 </div>
 
+<div @click="$slidev.nav.go($slidev.nav.currentPage + 82)" class="group cursor-pointer p-6 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-4xl mb-4">🎨</div>
+  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary">第三课：多模态AI应用实战</h3>
+  <p class="text-gray-600 text-sm">文生图与文生视频技术</p>
+  <div class="text-xs text-gray-400 mt-2">跳转到第三课</div>
+</div>
+
 </div>
 
 <div class="mt-8 text-sm text-gray-500 space-y-2">
@@ -165,6 +172,10 @@ src: ./pages/01-intro.md
 
 ---
 src: ./pages/02-context-engineering.md
+---
+
+---
+src: ./pages/03-ai-applications.md
 ---
 
 <!-- 完全移除了对策略页面的引用，因为HTML标签嵌套问题导致构建错误 -->
