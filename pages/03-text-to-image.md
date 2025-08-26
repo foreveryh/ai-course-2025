@@ -32,16 +32,16 @@ class: text-left max-w-[60ch] mx-auto leading-8 space-y-6
 2. **文生图模型的各类能力展示**  
    <span class="text-sm opacity-75">从写实到艺术，从人物到场景的全方位展示</span>
 
-3. **提示词技巧（通用 + 模型/场景特定）**  
+3. **（实践）提示词技巧（通用 + 模型/场景特定）**  
    <span class="text-sm opacity-75">结构化提示词与精细化控制技巧</span>
 
-4. **常用图像生成工具推荐**  
-   <span class="text-sm opacity-75">主流工具对比与选型指南</span>
+4. **（案例）分镜脚本和分镜视频**  
+   <span class="text-sm opacity-75">案例分享：生成1分钟长视频</span>
 
 </v-clicks>
 
 <div class="mt-8 pt-4 border-t border-gray-200">
-附：常见坑与排错、小抄模板、合规要点、一致性与后期小流程
+附：ComfyUI 工作流讲解说明
 </div>
 
 ---
@@ -101,7 +101,7 @@ layout: default
 class: text-center
 ---
 
-## 🎯 我们只需要选好模型，写好提示词
+## 🎯 要清晰地了解不同模型的能力
 
 
 <div class="flex flex-wrap justify-center gap-3 mt-6">
@@ -166,7 +166,9 @@ class: text-left max-w-[65ch] mx-auto leading-8
 - **即梦 3.0** - 2025年4月
   <span class="text-sm opacity-75">中文原生模型的重大进展</span>
 - **Imagen 4** - 2025年6月
-  <span class="text-sm opacity-75">Google的最新力作，多模态能力强化</span>
+  <span class="text-sm opacity-75">Google的多模态力作，图像质量显著提升</span>
+- **Gemini 2.5 Flash Image** - 2025年8月
+  <span class="text-sm opacity-75">Google最新一体化生成+编辑模型，代号nano-banana</span>
 
 </div>
 
@@ -227,6 +229,7 @@ editorial look.
 - **FLUX 1.1**：✅（高跟随与速度）
 - **Imagen 4**：✅（多比例、2K）
 - **GPT-5**：✅（生成稳定）
+- **Gemini 2.5 Flash Image**：✅（高质量生成，延迟低）
 
 <div class="mt-6 p-3 bg-green-50 rounded border border-green-200 text-sm">
 💡 Tips：左右对比同一提示不同镜头（35/50/85mm）效果
@@ -294,6 +297,7 @@ high legibility, proper kerning.
 - **FLUX 1.1**：🟡（可行但需多次采样或配合后期）
 - **Imagen 4**：✅ "优越的排版/拼写"，支持 2K 输出
 - **GPT-5**：✅（官方 Images API 强调文本可读）
+- **Gemini 2.5 Flash Image**：🟡（可做但小字/拼写仍有难度，建议后期贴字）
 
 <div class="mt-4 p-3 bg-orange-50 rounded border border-orange-200 text-sm">
 ⚡ 关键优势：Qwen-Image 和 Seedream 3.0 在中文文本渲染方面表现突出
@@ -322,15 +326,14 @@ class: gap-8
 ::right::
 ## 模型适配能力
 
-<v-clicks>
 
 - **Qwen-Image**：⛔ 无原生 ControlNet；可用参考图+编辑替代
 - **Seedream 3.0**：⛔ API 未公开；在即梦画布可通过草图/抠图近似
 - **FLUX 1.1**：✅ 有 ControlNet 方案（BFL "Flux.1 Tools" Canny/Depth）
 - **Imagen 4**：⛔ Controlled customization 不支持
 - **GPT-5**：⛔ 无 ControlNet 接口；用参考图/遮罩软控
+- **Gemini 2.5 Flash Image**：⛔ 无硬控接口；走文本+示例图的软控
 
-</v-clicks>
 
 <div class="mt-4 p-3 bg-blue-50 rounded border border-blue-200 text-sm">
 🔧 最佳选择：需要精确结构控制时，FLUX 1.1 是最佳选择
@@ -364,6 +367,7 @@ class: gap-8
 - **FLUX 1.1**：✅ 有 IP-Adapter 权重与节点（XLabs/InstantX 等）
 - **Imagen 4**：🟡（可上传输入图 + 提示）
 - **GPT-5**：🟡（API 支持 image-to-image/编辑）
+- **Gemini 2.5 Flash Image**：✅（原生"多图融合/合成"功能）
 
 ---
 layout: two-cols
@@ -450,6 +454,7 @@ class: gap-8
 - **Seedream 3.0**：✅ 画布支持局部重绘、扩图、消除等工具
 - **Imagen 4**：⛔ 不支持编辑
 - **GPT-5**：✅ 支持遮罩编辑/变体
+- **Gemini 2.5 Flash Image**：✅（自然语言定向局部编辑，官方重点能力）
 
 
 ---
@@ -481,6 +486,7 @@ class: gap-8
 - **Seedream 3.0**：⛔ 未公开 LoRA/DreamBooth
 - **Imagen 4**：⛔ 本端点不支持主体/风格定制
 - **GPT-5**：⛔ 不开放 LoRA/DreamBooth
+- **Gemini 2.5 Flash Image**：⛔ 无开放权重/微调接口；借助多图融合与多轮编辑替代
 
 **实操配方**：
 1. 准备 20-100 张风格/角色样本
@@ -505,19 +511,235 @@ class: text-center
 
 <div class="text-sm mt-8">
 
-| 技巧/模型 | Qwen-Image | Seedream 3.0 | FLUX 1.1 | Imagen 4 | GPT-5 |
-|-----------|------------|--------------|----------|----------|-------|
-| **写实/多风格生成** | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **图内文本渲染** | ✅ 中英强 | ✅ 小字/排版 | 🟡 | ✅ 官方强调排版 | ✅ |
-| **ControlNet** | ⛔ 无原生 | ⛔ API 无 | ✅ BFL 工具 & 社区 | ⛔ 受限功能 | ⛔ |
-| **IP-Adapter** | 🟡 编辑/参考图替代 | 🟡 即梦"看图改图" | ✅ XLabs/InstantX | 🟡 参考图+提示 | 🟡 image-to-image |
-| **局部编辑/扩图** | ✅ Qwen-Image-Edit | ✅ 即梦画布 | ✅ Fill/Kontext | ⛔ 暂时不支持 | ✅ 遮罩编辑 |
-| **个性化定制** | ✅ 开源可训/可挂 | ⛔ 未开放 | ✅ LoRA 生态成熟 | ⛔ 不支持定制 | ⛔ |
-| **多比例/2K档** | ✅ | ✅ 2K 原生 | ✅ | ✅ 2K 列表 | ✅ |
+| 技巧/模型 | Qwen-Image | Seedream 3.0 | FLUX 1.1 | Imagen 4 | GPT-5 | Gemini 2.5 Flash Image |
+|-----------|------------|--------------|----------|----------|-------|------------------------|
+| **写实/多风格生成** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅（高质量，延迟低） |
+| **图内文本渲染** | ✅ 中英强 | ✅ 小字/排版 | 🟡 | ✅ 官方强调排版 | ✅ | 🟡（小字/拼写仍有难度） |
+| **ControlNet** | ⛔ 无原生 | ⛔ API 无 | ✅ BFL 工具 & 社区 | ⛔ 受限功能 | ⛔ | ⛔（无硬控接口） |
+| **IP-Adapter** | 🟡 编辑/参考图替代 | 🟡 即梦"看图改图" | ✅ XLabs/InstantX | 🟡 参考图+提示 | 🟡 image-to-image | ✅（原生多图融合） |
+| **局部编辑/扩图** | ✅ Qwen-Image-Edit | ✅ 即梦画布 | ✅ Fill/Kontext | ⛔ 暂时不支持 | ✅ 遮罩编辑 | ✅（自然语言定向编辑） |
+| **个性化定制** | ✅ 开源可训/可挂 | ⛔ 未开放 | ✅ LoRA 生态成熟 | ⛔ 不支持定制 | ⛔ | ⛔（无微调接口） |
+| **多比例/2K档** | ✅ | ✅ 2K 原生 | ✅ | ✅ 2K 列表 | ✅ | ✅（多比例支持） |
 
 </div>
 
 <div class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-💡 选择建议：硬控/一致性 → FLUX 1.1；字形/排版 → Qwen-Image/Seedream 3.0/Imagen 4
+💡 **选择建议**：硬控/一致性 → FLUX 1.1；字形/排版 → Qwen-Image/Seedream 3.0/Imagen 4
+</div>
+
+---
+layout: section
+class: text-center
+---
+
+# 🖼️ 图生图 (Image-to-Image)
+
+## 同一模型的不同用法
+
+<div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+核心概念：图生图不是单独的模型，而是一组使用方式。<br>
+同一生成模型在不同"条件通道"下，实现从图像到图像的转换。
+</div>
+
+---
+
+---
+layout: two-cols
+class: gap-8
+---
+
+## 1️⃣ Latent 重绘 (SDEdit)
+
+**做什么**：把原图编码→加噪→按强度重绘，保构图/主体，改风格/材质
+
+**场景**：
+- 旧图换风格，统一调性
+- 修纹理，改色调
+- 风格化处理
+
+**关键参数**：
+- denoise strength（保真↔创作度）
+- steps、CFG
+
+**速用模板**：
+```
+[原图描述], in [新风格] style, 
+[保持的元素], [修改的元素]
+```
+
+::right::
+## 模型适配能力
+
+
+- **Qwen-Image**：✅（I2I）
+- **Seedream 3.0**：✅（看图改图/重绘）
+- **FLUX 1.1**：✅
+- **Imagen 4**：⛔（Generate端点无编辑）
+- **GPT-5**：✅（image-to-image）
+
+<div class="mt-6 p-3 bg-green-50 rounded border border-green-200 text-sm">
+🎯 最佳选择：需要风格转换时，开源模型灵活度更高
+</div>
+
+---
+layout: two-cols
+class: gap-8
+---
+
+## 2️⃣ 遮罩编辑 (Inpaint/Outpaint)
+
+**做什么**：只改遮罩区域（修字、换小物件、扩图）
+
+**场景**：
+- 改logo/字色
+- 补边，横竖版改造
+- 局部内容替换
+
+**技巧**：
+- mask feather 2-4px
+- 重绘强度适中
+- 注意边界保护
+
+::right::
+## 模型适配能力
+
+
+- **Qwen-Image-Edit**：✅（精准改图内文字）
+- **Seedream 3.0**：✅（画布局部重绘/扩图）
+- **FLUX Fill/Kontext**：✅
+- **Imagen 4**：⛔（本端点不支持）
+- **GPT-5**：✅（mask编辑）
+
+---
+layout: two-cols
+class: gap-8
+---
+
+## 3️⃣ 指令式编辑
+
+**做什么**：原图 + 文本指令直接生成改后图
+
+**场景**：
+- 快速整体风格替换
+- "让它更复古"、"把天空换晴天"
+- 语义级别的修改
+
+**提示技巧**：
+- 指令要具体明确
+- 避免过于复杂的多重指令
+- 可以多轮小改
+
+**示例**：
+```
+"Change the lighting to golden hour, 
+keep everything else the same"
+```
+
+::right::
+## 模型适配能力
+
+
+- **Qwen-Image-Edit**：✅（语义+外观双通道）
+- **Seedream 3.0**：✅（一句话改图）
+- **FLUX Kontext**：✅（原生in-context编辑）
+- **Imagen 4**：⛔
+- **GPT-5**：✅（参考图+指令）
+
+
+<div class="mt-4 p-3 bg-orange-50 rounded border border-orange-200 text-sm">
+⚡ 推荐组合：FLUX Kontext + 多轮对话式编辑
+</div>
+
+---
+layout: two-cols
+class: gap-8
+---
+
+## 4️⃣ 身份/人脸一致性
+
+**做什么**：针对人脸特征的身份向量注入，保相貌一致
+
+**场景**：
+- 同一演员/主播跨场景输出
+- 角色IP的一致性创作
+- 虚拟人物形象管理
+
+**关键要点**：
+- ID权重平衡
+- 区域权重控制
+- 固定seed配合
+
+::right::
+## 模型适配能力
+
+
+- **Qwen-Image**：🟡（编辑+参考图近似）
+- **Seedream 3.0**：🟡
+- **FLUX 1.1**：✅（有FaceID变体生态）
+- **Imagen 4**：⛔
+- **GPT-5**：🟡（历史图+局部编辑）
+
+---
+layout: two-cols
+class: gap-8
+---
+
+## 5️⃣ 超分/修复
+
+**做什么**：图→图的复原/增强（提升清晰度、去噪、调色）
+
+**场景**：
+- 出品前提升清晰度
+- 统一风格颗粒
+- 修噪点，修旧照
+- 低分辨率图像增强
+
+**参数控制**：
+- 放大倍率
+- 保边锐度
+- 去噪强度
+
+::right::
+## 模型适配能力
+
+
+- **Qwen-Image**：✅（增强/修复工具）
+- **Seedream 3.0**：✅（一键超分）
+- **FLUX 1.1**：✅（管线外挂SR）
+- **Imagen 4**：✅（可用外部SR叠加）
+- **GPT-5**：🟡（外部超分配合）
+
+
+<div class="mt-4 p-3 bg-blue-50 rounded border border-blue-200 text-sm">
+🔧 实用建议：出品级图像最后都建议过一遍超分处理
+</div>
+
+
+---
+layout: default
+class: text-center
+---
+
+## 🎯 图生图模式选择指南
+
+<div class="text-sm mt-8">
+
+| 需求场景 | 推荐模式 | 最佳模型选择 | 关键技巧 |
+|---------|----------|-------------|----------|
+| **摆位/姿态必须准** | ControlNet | FLUX 1.1 | 强度0.6-0.8，先跑结构再加风格 |
+| **像这张风格/这个人脸** | IP-Adapter/FaceID | FLUX 1.1 | scale=0.5-0.9，可叠加遮罩微修 |
+| **精修细节/换字/改局部** | 遮罩编辑 | Qwen-Image-Edit | feather 2-4px，低强度起步 |
+| **一键整体变风格** | 指令式编辑/SDEdit | Qwen-Image/FLUX | 强度从低到中试，多轮小改 |
+| **复杂多模块海报** | 区域/组合提示 | FLUX 1.1 | 分区域处理，inpaint收边 |
+| **出品级清晰度** | 超分/修复 | 通用 | 末端处理，选择合适倍率 |
+
+</div>
+
+<div class="mt-6 p-4 bg-gradient-to-r from-blue-50 to-green-50 rounded-lg border-l-4 border-blue-500">
+<h3 class="text-lg font-semibold mb-2">💡 核心理解</h3>
+<p class="text-base">
+图生图不是一个单独的模型，而是一组用法。<br>
+同一模型在不同"条件通道"（结构、风格、遮罩、上下文）下，就能实现不同的图生图功能。
+</p>
 </div>
 

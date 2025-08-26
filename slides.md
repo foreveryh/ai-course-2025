@@ -107,48 +107,43 @@ class: text-center
 
 # 📚 课程导航
 
-<div class="grid grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
+<div class="grid grid-cols-2 gap-3 mt-6 max-w-4xl mx-auto">
 
-<div @click="$slidev.nav.next()" class="group cursor-pointer p-6 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
-  <div class="text-4xl mb-4">👨‍🏫</div>
-  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary">讲师介绍</h3>
-  <p class="text-gray-600 text-sm">了解您的 AI 导师背景与经验</p>
-  <div class="text-xs text-gray-400 mt-2">页面 3+</div>
+<div @click="$slidev.nav.next()" class="group cursor-pointer p-3 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-2xl mb-1">👨‍🏫</div>
+  <h3 class="text-base font-semibold mb-1 group-hover:text-primary">讲师介绍</h3>
+  <p class="text-gray-600 text-xs leading-tight">了解您的 AI 导师背景与经验</p>
 </div>
 
-<div @click="$slidev.nav.go($slidev.nav.currentPage + 4)" class="group cursor-pointer p-6 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
-  <div class="text-4xl mb-4">🎯</div>
-  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary">课程介绍</h3>
-  <p class="text-gray-600 text-sm">课程目标、受众与整体安排</p>
-  <div class="text-xs text-gray-400 mt-2">跳转到课程介绍</div>
+<div @click="$slidev.nav.go($slidev.nav.currentPage + 4)" class="group cursor-pointer p-3 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-2xl mb-1">🎯</div>
+  <h3 class="text-base font-semibold mb-1 group-hover:text-primary">课程介绍</h3>
+  <p class="text-gray-600 text-xs leading-tight">课程目标、受众与整体安排</p>
 </div>
 
-<div @click="$slidev.nav.go($slidev.nav.currentPage + 22)" class="group cursor-pointer p-6 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
-  <div class="text-4xl mb-4">🧠</div>
-  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary">第一课：AI能力与边界</h3>
-  <p class="text-gray-600 text-sm">认知重塑与技术底层原理</p>
-  <div class="text-xs text-gray-400 mt-2">跳转到第一课</div>
+<div @click="$slidev.nav.go($slidev.nav.currentPage + 22)" class="group cursor-pointer p-3 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-2xl mb-1">🧠</div>
+  <h3 class="text-base font-semibold mb-1 group-hover:text-primary">第一课：AI能力与边界</h3>
+  <p class="text-gray-600 text-xs leading-tight">认知重塑与技术底层原理</p>
 </div>
 
-<div @click="$slidev.nav.go($slidev.nav.currentPage + 52)" class="group cursor-pointer p-6 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
-  <div class="text-4xl mb-4">⚡</div>
-  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary">第二课：上下文工程实战</h3>
-  <p class="text-gray-600 text-sm">提示词工程与实战演练</p>
-  <div class="text-xs text-gray-400 mt-2">跳转到第二课</div>
+<div @click="$slidev.nav.go($slidev.nav.currentPage + 52)" class="group cursor-pointer p-3 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-2xl mb-1">⚡</div>
+  <h3 class="text-base font-semibold mb-1 group-hover:text-primary">第二课：上下文工程实战</h3>
+  <p class="text-gray-600 text-xs leading-tight">提示词工程与实战演练</p>
 </div>
 
-<div @click="$slidev.nav.go($slidev.nav.currentPage + 82)" class="group cursor-pointer p-6 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
-  <div class="text-4xl mb-4">🎨</div>
-  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary">第三课：多模态AI应用实战</h3>
-  <p class="text-gray-600 text-sm">文生图与文生视频技术</p>
-  <div class="text-xs text-gray-400 mt-2">跳转到第三课</div>
+<div @click="$slidev.nav.go($slidev.nav.currentPage + 88)" class="group cursor-pointer p-3 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-2xl mb-1">🎨</div>
+  <h3 class="text-base font-semibold mb-1 group-hover:text-primary">第三课：文生图 & 文生视频</h3>
+  <p class="text-gray-600 text-xs leading-tight">从想法到成片的完整工作流</p>
 </div>
 
 </div>
 
-<div class="mt-8 text-sm text-gray-500 space-y-2">
+<div class="mt-4 text-xs text-gray-500 text-center space-y-1">
 <p>💡 点击任意模块开始学习，或使用键盘导航</p>
-<p class="text-xs">⌨️ 快捷键：<kbd class="px-2 py-1 bg-gray-200 rounded">→</kbd> 下一页 | <kbd class="px-2 py-1 bg-gray-200 rounded">←</kbd> 上一页 | <kbd class="px-2 py-1 bg-gray-200 rounded">Home</kbd> 首页</p>
+<p>⌨️ 快捷键：<kbd class="px-1 py-0.5 bg-gray-200 rounded text-xs">→</kbd> 下一页 | <kbd class="px-1 py-0.5 bg-gray-200 rounded text-xs">←</kbd> 上一页 | <kbd class="px-1 py-0.5 bg-gray-200 rounded text-xs">Home</kbd> 首页</p>
 </div>
 
 <!--
@@ -175,7 +170,7 @@ src: ./pages/02-context-engineering.md
 ---
 
 ---
-src: ./pages/03-ai-applications.md
+src: ./pages/03-text-to-image.md
 ---
 
 <!-- 完全移除了对策略页面的引用，因为HTML标签嵌套问题导致构建错误 -->
