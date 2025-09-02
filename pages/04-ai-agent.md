@@ -861,6 +861,7 @@ class: text-left max-w-[56ch] mx-auto leading-10 space-y-8
 3. **动态规划**：根据实际情况调整后续步骤
 
 
+
 ---
 layout: two-cols
 class: text-left max-w-[65ch] mx-auto leading-8 space-y-6
@@ -900,6 +901,12 @@ class: text-left max-w-[65ch] mx-auto leading-8 space-y-6
 行动：根据数据生成用户友好的回答
 ```
 
+<div class="mt-8 max-w-4xl mx-auto">
+
+<GeminiAgentModal />
+
+</div>
+
 
 <div v-click class="mt-6 p-4 bg-green-50 rounded-lg border-l-4 border-green-400">
 💡 <strong>关键</strong>：每个循环都基于最新信息进行决策，保证决策的准确性和适应性
@@ -921,11 +928,7 @@ class: text-center
 
 # 🎯 实战演示：智能研究助手
 
-<div class="mt-8 max-w-4xl mx-auto">
-
-<GeminiAgentModal />
-
-</div>
+https://peng.craft.me/BZrxoPPwmt6ZeY
 
 <div v-click class="mt-6 text-lg text-gray-600">
 点击上方按钮查看完整的 ReAct 模式演示
@@ -1049,16 +1052,6 @@ class: text-left max-w-[65ch] mx-auto leading-8 space-y-6
 - 思考→行动→观察→再思考的工作流程
 - 相比其他模式的优势：实时反馈和错误纠正
 
-### 3. **Gemini 实战经验**
-- AI Studio 的使用方法和配置技巧
-- 函数调用和工具集成的实现
-- 完整 Agent 项目的构建流程
-
-### 4. **实践应用能力**
-- 从需求分析到功能设计的完整思路
-- 工具函数的设计和集成方法
-- 测试和优化 Agent 性能的技巧
-
 </v-clicks>
 
 ---
@@ -1067,13 +1060,13 @@ layoutClass: gap-8
 class: text-left max-w-[60ch] mx-auto leading-8
 ---
 
-## 🚀 下一步行动建议
+## 🚀 进一步学习
 
 ### 🔧 技术提升
 <v-clicks>
 
-- **深入学习更多工具**：API集成、数据库连接、文件操作
-- **探索其他平台**：OpenAI Assistant、Claude、Anthropic
+- **深入学习更多工具**：Dify、n8n 等
+- **探索其他平台**：Genspark、Manus
 - **学习高级模式**：多Agent协作、链式推理、记忆管理
 - **关注最新发展**：跟踪 Agent 技术的最新进展
 
@@ -1095,21 +1088,16 @@ class: text-left max-w-[60ch] mx-auto leading-8
 
 ### 📖 文档和教程
 <v-clicks>
-
-- [Gemini AI Studio 官方文档](https://aistudio.google.com)
-- [ReAct 原论文](https://arxiv.org/abs/2210.03629)
-- [LangChain Agent 教程](https://langchain.com)
-- [OpenAI Assistant API](https://platform.openai.com)
-
+学习群内持续更新/分享
 </v-clicks>
 
 ### 🛠️ 实用工具
 <v-clicks>
 
-- **开发框架**：LangChain, CrewAI, AutoGen
-- **部署平台**：Vercel, Railway, Render  
-- **监控工具**：LangSmith, Weights & Biases
-- **社区资源**：GitHub, Discord, Reddit
+- **开发框架**：LangGraph
+- **部署平台**：Vercel, Cloudflare works
+- **监控工具**：LangSmith
+- **社区资源**：GitHub, X, Reddit
 
 </v-clicks>
 
@@ -1138,7 +1126,6 @@ class: text-center
     </div>
   </div>
 </div>
-
 <div class="mt-8 p-6 bg-gradient-to-r from-blue-50 to-green-50 rounded-lg max-w-2xl mx-auto">
   <p class="text-lg font-semibold text-gray-800">下一步：将今天学到的知识应用到你的实际项目中</p>
   <p class="text-gray-600 mt-2">让AI真正成为你的智能工作伙伴！</p>

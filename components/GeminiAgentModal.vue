@@ -3,7 +3,7 @@
     <ModalDetails title="Gemini Agent 实战演示" :maxWidth="'1000px'" :open="open" @update:open="val => open = val">
       <template #trigger="{ open }">
         <button class="px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors text-lg font-semibold" @click="open()">
-          🚀 查看 Gemini ReAct 演示
+          🚀 查看 ReAct 模式演示
         </button>
       </template>
 
