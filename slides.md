@@ -139,6 +139,12 @@ class: text-center
   <p class="text-gray-600 text-xs leading-tight">从想法到成片的完整工作流</p>
 </div>
 
+<div @click="$slidev.nav.go($slidev.nav.currentPage + 124)" class="group cursor-pointer p-3 rounded-lg border-2 border-gray-200 hover:border-primary hover:bg-primary/5 transition-all">
+  <div class="text-2xl mb-1">🤖</div>
+  <h3 class="text-base font-semibold mb-1 group-hover:text-primary">第四课：深入理解 AI Agent</h3>
+  <p class="text-gray-600 text-xs leading-tight">ReAct 模式与 Gemini 实战演示</p>
+</div>
+
 </div>
 
 <div class="mt-4 text-xs text-gray-500 text-center space-y-1">
@@ -171,6 +177,10 @@ src: ./pages/02-context-engineering.md
 
 ---
 src: ./pages/03-text-to-image.md
+---
+
+---
+src: ./pages/04-ai-agent.md
 ---
 
 <!-- 完全移除了对策略页面的引用，因为HTML标签嵌套问题导致构建错误 -->
