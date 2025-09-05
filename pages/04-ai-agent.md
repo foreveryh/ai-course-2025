@@ -1,8 +1,8 @@
 ---
 layout: cover
 class: text-center
+transition: slide-left
 ---
-
 # 深入理解 AI Agent
 让你的AI更"聪明"地思考和行动
 
@@ -35,7 +35,6 @@ class: text-center
 layout: center
 class: text-left max-w-[56ch] mx-auto leading-10 space-y-6
 ---
-
 <script setup>
 // Import components for interactive demonstrations
 import AgentDemo from '../components/AgentDemo.vue'
@@ -61,14 +60,12 @@ import GeminiAgentModal from '../components/GeminiAgentModal.vue'
 layout: section
 class: text-center
 ---
-
 # 开场热身
 让我们了解你对 AI Agent 的认知
 
 ---
 class: text-left max-w-[60ch] mx-auto leading-8 space-y-6
 ---
-
 ## 🙋‍♀️ 快速调研（举手/发言）
 
 <v-clicks>
@@ -95,7 +92,6 @@ class: text-left max-w-[60ch] mx-auto leading-8 space-y-6
 layout: section
 class: text-center
 ---
-
 # Part 1: AI Agent 的本质
 从概念到架构的全面解析（30分钟）
 
@@ -104,7 +100,6 @@ layout: two-cols
 layoutClass: gap-6
 class: text-left leading-7
 ---
-
 ## 🤔 引言：ChatGPT 很强大，但它有什么"局限"？
 
 <v-clicks>
@@ -187,7 +182,6 @@ LLM 是一个 <span v-mark.underline.orange>"被动的推理引擎"</span>
 layout: section
 class: text-center
 ---
-
 # 那么，什么是 AI Agent？
 
 ---
@@ -195,7 +189,6 @@ layout: two-cols
 layoutClass: gap-8
 class: text-left max-w-[60ch] mx-auto leading-8 space-y-6
 ---
-
 ## 🤖 什么是 AI Agent？
 
 <v-clicks>
@@ -241,7 +234,6 @@ class: text-left max-w-[60ch] mx-auto leading-8 space-y-6
 layout: center
 class: text-center
 ---
-
 <div class="mt-8">
   <div class="flex justify-center">
     <img src="/Agent.png" alt="LLM-Powered Autonomous Agent System Overview by Lilian Weng" class="max-w-4xl w-full h-auto rounded-lg shadow-lg" />
@@ -263,7 +255,6 @@ class: text-center
 layout: center
 class: text-center
 ---
-
 # 🏗️ AI Agent 的基础架构
 
 <div class="mt-6">
@@ -313,7 +304,6 @@ layout: two-cols
 layoutClass: gap-6
 class: text-left max-w-[60ch] mx-auto leading-8 space-y-6
 ---
-
 ## 🧩 Agent 架构的核心组件
 
 <v-clicks>
@@ -355,7 +345,6 @@ class: text-left max-w-[60ch] mx-auto leading-8 space-y-6
 layout: section
 class: text-center
 ---
-
 # 🧠 深入理解：决策/推理引擎
 Agent 的"大脑"如何工作
 
@@ -363,7 +352,6 @@ Agent 的"大脑"如何工作
 layout: center
 class: text-center
 ---
-
 # 📋 推理引擎的整体框架
 
 <div class="mt-8 max-w-5xl mx-auto">
@@ -421,7 +409,6 @@ class: text-center
 layout: section
 class: text-center
 ---
-
 # 📊 事前规划：思维链技术
 制定策略的核心方法
 
@@ -430,7 +417,6 @@ layout: two-cols
 layoutClass: gap-6
 class: text-left leading-7
 ---
-
 ## 🔗 Chain of Thought (CoT)
 
 <v-clicks>
@@ -494,7 +480,6 @@ ToT 多路径探索：
 layout: section
 class: text-center
 ---
-
 # 🔄 事后反思：自我进化技术
 介错而改的智能机制
 
@@ -503,7 +488,6 @@ layout: two-cols
 layoutClass: gap-6
 class: text-left leading-7
 ---
-
 ## 🔄 ReAct 框架
 
 <v-clicks>
@@ -575,7 +559,6 @@ Action: 生成用户友好的回复
 layout: section
 class: text-center
 ---
-
 # 🛠️ 深入理解：工具接口
 Agent 的"手脚"如何延伸
 
@@ -583,7 +566,6 @@ Agent 的"手脚"如何延伸
 layout: default
 class: text-left leading-7
 ---
-
 # 🤔 为什么 Agent 需要工具？
 
 <v-clicks>
@@ -613,7 +595,6 @@ class: text-left leading-7
 layout: section
 class: text-center
 ---
-
 # 🎯 工具决策机制
 Agent 如何决定何时、如何使用工具？
 
@@ -622,7 +603,6 @@ layout: two-cols
 layoutClass: gap-6
 class: text-left leading-7
 ---
-
 ## 🧩 工具决策的核心机制
 
 <v-clicks>
@@ -695,7 +675,6 @@ response = client.chat.completions.create(
 layout: center
 class: text-center
 ---
-
 # 🔗 MCP：模型上下文协议
 **Model Context Protocol - 工具集成的新标准**
 
@@ -740,7 +719,6 @@ class: text-center
 layout: section
 class: text-center
 ---
-
 # 🚨 当前 AI Agent 的能力边界
 
 ---
@@ -748,7 +726,6 @@ layout: two-cols
 layoutClass: gap-6
 class: text-left leading-7
 ---
-
 ## ✅ 目前能做好的事情
 
 <v-clicks>
@@ -799,7 +776,6 @@ layout: two-cols
 layoutClass: gap-6
 class: text-left leading-7
 ---
-
 ## ⚠️ 仍然存在的局限
 
 <v-clicks>
@@ -831,7 +807,6 @@ class: text-left leading-7
 layout: section
 class: text-center
 ---
-
 # Part 2: ReAct 模式深度解析
 推理与行动的完美结合（25分钟）
 
@@ -839,7 +814,6 @@ class: text-center
 layout: two-cols   
 class: text-left max-w-[56ch] mx-auto leading-10 space-y-8
 ---
-
 ## 🔄 ReAct 模式简介
 
 
@@ -866,7 +840,6 @@ class: text-left max-w-[56ch] mx-auto leading-10 space-y-8
 layout: two-cols
 class: text-left max-w-[65ch] mx-auto leading-8 space-y-6
 ---
-
 ## 🛠️ ReAct 模式的工作流程
 
 
@@ -916,7 +889,6 @@ class: text-left max-w-[65ch] mx-auto leading-8 space-y-6
 layout: section
 class: text-center
 ---
-
 # Part 3: Gemini Agent 实战演示
 从理论到实践的完整演练（10分钟）
 
@@ -925,7 +897,6 @@ class: text-center
 layout: center
 class: text-center
 ---
-
 # 🎯 实战演示：智能研究助手
 
 https://peng.craft.me/BZrxoPPwmt6ZeY
@@ -938,14 +909,12 @@ https://peng.craft.me/BZrxoPPwmt6ZeY
 layout: section
 class: text-center
 ---
-
 # 🔧 动手实践：构建你的第一个 Agent
 
 ---
 layout: default
 class: text-left max-w-[65ch] mx-auto leading-8 space-y-6
 ---
-
 ## 🎯 实践任务：个人学习助手
 
 <v-clicks>
@@ -981,7 +950,6 @@ layout: two-cols
 layoutClass: gap-8
 class: text-left
 ---
-
 ## 📝 实践步骤指导
 
 ### 第1步：设计系统提示词
@@ -1030,14 +998,12 @@ Action: recommend_resources("Python基础", "初学者")
 layout: section
 class: text-center
 ---
-
 # 📊 课程总结与展望
 
 ---
 layout: default
 class: text-left max-w-[65ch] mx-auto leading-8 space-y-6
 ---
-
 ## 🎯 今天你学到了什么？
 
 <v-clicks>
@@ -1059,7 +1025,6 @@ layout: two-cols
 layoutClass: gap-8
 class: text-left max-w-[60ch] mx-auto leading-8
 ---
-
 ## 🚀 进一步学习
 
 ### 🔧 技术提升
@@ -1102,39 +1067,762 @@ class: text-left max-w-[60ch] mx-auto leading-8
 </v-clicks>
 
 ---
+layout: section
+class: text-center
+---
+# Part 4: AI Workflow 模式详解
+基于 Anthropic 2024 年最佳实践（20分钟）
+
+---
+layout: section
+class: text-center
+---
+# 🏗️ AI Workflow vs Agent 架构区分
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7
+---
+## 🔄 AI Workflow
+
+<v-clicks>
+
+### 📋 **定义**
+通过**预定义的代码路径**来编排大模型和工具
+
+### 🎯 **特点**
+- **可预测性**：流程固定，结果一致
+- **可控性**：每个步骤都有明确规则
+- **效率高**：适合标准化任务
+- **易调试**：问题容易定位和修复
+
+### 📝 **适用场景**
+- 文档处理流水线
+- 客服分类路由
+- 内容生成工作流
+- 数据分析自动化
+
+</v-clicks>
+
+::right::
+
+## 🤖 AI Agent
+
+<v-clicks>
+
+### 📋 **定义**
+大模型**动态决定**自己的流程及使用什么工具
+
+### 🎯 **特点**
+- **自主性**：能独立制定计划
+- **灵活性**：适应复杂多变的任务
+- **智能性**：基于环境反馈调整策略
+- **创造性**：能处理开放式问题
+
+### 📝 **适用场景**
+- 复杂问题解决
+- 创意内容生成
+- 多步骤研究任务
+- 个性化助手服务
+
+</v-clicks>
+
+<div v-click class="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400 text-sm">
+💡 <strong>选择原则</strong>：能用 Workflow 解决的，就不要用 Agent。只有在需要动态决策时才考虑 Agent
+</div>
+
+---
+layout: section
+class: text-center
+---
+# 🔧 AI Workflow 基础构建模块
+
+---
 layout: center
 class: text-center
 ---
+# 🧩 增强型大模型（Augmented LLM）
 
-# 🙏 感谢参与 AI Agent 深度学习
-
-<div class="mt-8 space-y-4">
-  <p class="text-2xl text-gray-600">从概念到实践，你已经具备了构建智能Agent的基础能力</p>
-  
-  <div class="flex justify-center gap-8 mt-12">
-    <div class="text-center">
-      <div class="text-4xl mb-2">🤖</div>
-      <p class="text-lg font-semibold">理解了Agent本质</p>
-    </div>
-    <div class="text-center">
-      <div class="text-4xl mb-2">🔄</div>
-      <p class="text-lg font-semibold">掌握了ReAct模式</p>
-    </div>
-    <div class="text-center">
-      <div class="text-4xl mb-2">🚀</div>
-      <p class="text-lg font-semibold">具备了实战能力</p>
-    </div>
+<div class="mt-4">
+  <div class="flex justify-center">
+    <img src="/ai-agent-images/augmented-llm.webp" alt="增强型大模型架构" class="max-w-3xl w-full h-auto rounded-lg shadow-lg" />
   </div>
 </div>
-<div class="mt-8 p-6 bg-gradient-to-r from-blue-50 to-green-50 rounded-lg max-w-2xl mx-auto">
-  <p class="text-lg font-semibold text-gray-800">下一步：将今天学到的知识应用到你的实际项目中</p>
-  <p class="text-gray-600 mt-2">让AI真正成为你的智能工作伙伴！</p>
+
+<div v-click class="mt-4 text-center">
+  <div class="text-base text-gray-600 mb-1">Agent/Workflow 的核心基础</div>
+  <div class="text-xs text-gray-500">具备检索、工具和记忆等增强功能的智能模型</div>
 </div>
 
-<!--
-演讲者笔记：
-- 回顾今天的核心学习点
-- 鼓励学员继续实践和探索
-- 预告下一阶段的学习重点
-- 感谢学员的参与和互动
--->
+<div v-click class="mt-3 grid grid-cols-3 gap-3 max-w-3xl mx-auto text-xs">
+  <div class="text-center p-2 bg-blue-50 rounded">
+    <div class="font-semibold text-blue-700">🔍 检索功能</div>
+    <div class="text-gray-600 mt-1">搜索查询、知识库访问</div>
+  </div>
+  <div class="text-center p-2 bg-green-50 rounded">
+    <div class="font-semibold text-green-700">🛠️ 工具集成</div>
+    <div class="text-gray-600 mt-1">API调用、代码执行</div>
+  </div>
+  <div class="text-center p-2 bg-purple-50 rounded">
+    <div class="font-semibold text-purple-700">🧠 记忆管理</div>
+    <div class="text-gray-600 mt-1">上下文保存、经验学习</div>
+  </div>
+</div>
+
+---
+layout: section
+class: text-center
+---
+# 🔗 提示链（Prompt Chaining）
+
+---
+layout: center
+class: text-center
+---
+# 📋 提示链模式详解
+
+<div class="mt-8">
+  <div class="flex justify-center">
+    <img src="/ai-agent-images/prompt-chaining.webp" alt="提示链工作流" class="max-w-4xl w-full h-auto rounded-lg shadow-lg" />
+  </div>
+</div>
+
+<div v-click class="mt-6 text-center">
+  <div class="text-lg text-gray-600 mb-2">将复杂任务分解为顺序子任务</div>
+  <div class="text-sm text-gray-500">每个 LLM call 处理前一个的输出，中间可添加检查点</div>
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7
+---
+## 🎯 适用场景
+
+<v-clicks>
+
+### ✅ **理想条件**
+- 任务可以**干净地分解**为固定子任务
+- 每个步骤都有**明确的输入输出**
+- 步骤之间有**清晰的依赖关系**
+
+### 📝 **典型应用**
+- **营销文案生成**：创意构思 → 文案撰写 → 多语言翻译
+- **文档编写**：大纲制定 → 内容填充 → 格式优化
+- **数据分析**：数据清洗 → 统计分析 → 报告生成
+
+</v-clicks>
+
+::right::
+
+## 💡 设计要点
+
+<v-clicks>
+
+### 🔧 **技术实现**
+```
+步骤1: 生成营销创意
+↓
+检查点: 创意质量评估
+↓
+步骤2: 撰写具体文案
+↓
+检查点: 文案效果验证
+↓
+步骤3: 多语言翻译
+```
+
+### ⚠️ **注意事项**
+- **错误传播**：前一步错误会影响后续步骤
+- **上下文丢失**：需要合理传递关键信息
+- **成本控制**：多个 LLM 调用增加成本
+
+</v-clicks>
+
+---
+layout: section
+class: text-center
+---
+# 🚦 路由（Routing）
+
+---
+layout: center
+class: text-center
+---
+# 🎯 路由模式详解
+
+<div class="mt-8">
+  <div class="flex justify-center">
+    <img src="/ai-agent-images/routing-workflow.webp" alt="路由工作流" class="max-w-4xl w-full h-auto rounded-lg shadow-lg" />
+  </div>
+</div>
+
+<div v-click class="mt-6 text-center">
+  <div class="text-lg text-gray-600 mb-2">智能分类并转发到专门处理流程</div>
+  <div class="text-sm text-gray-500">针对不同任务类型优化提示词和工具</div>
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7
+---
+## 🎯 适用场景
+
+<v-clicks>
+
+### ✅ **理想条件**
+- 存在**不同类别的复杂任务**
+- 分类后处理效果**明显更好**
+- 能够**准确分类**输入
+
+### 📝 **典型应用**
+- **智能客服**：一般咨询 → 技术支持 → 退款处理
+- **内容审核**：文本审核 → 图片审核 → 视频审核
+- **模型路由**：简单问题 → 小模型，复杂问题 → 大模型
+
+</v-clicks>
+
+::right::
+
+## 💡 设计要点
+
+<v-clicks>
+
+### 🔧 **分类策略**
+```
+用户输入 → 分类器 → 路由决策
+                ↓
+        ┌───────┼───────┐
+        ↓       ↓       ↓
+    客服A    技术支持   退款处理
+   (通用)     (专业)    (流程)
+```
+
+### ⚠️ **注意事项**
+- **分类准确性**：错误分类导致处理效果差
+- **阈值设定**：平衡分类精度和召回率
+- **兜底机制**：处理无法分类的边缘情况
+
+</v-clicks>
+
+---
+layout: section
+class: text-center
+---
+# ⚡ 并行化（Parallelization）
+
+---
+layout: center
+class: text-center
+---
+# 🔄 并行化模式详解
+
+<div class="mt-8">
+  <div class="flex justify-center">
+    <img src="/ai-agent-images/parallelization-workflow.webp" alt="并行化工作流" class="max-w-4xl w-full h-auto rounded-lg shadow-lg" />
+  </div>
+</div>
+
+<div v-click class="mt-6 text-center">
+  <div class="text-lg text-gray-600 mb-2">多任务并行执行，结果聚合处理</div>
+  <div class="text-sm text-gray-500">分段处理 + 投票机制，提高效率和质量</div>
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7
+---
+## 🎯 两种并行策略
+
+<v-clicks>
+
+### 📊 **分段处理（Sectioning）**
+类似 MapReduce，将任务分解为独立子任务
+
+**应用场景：**
+- **安全检测**：内容审核 + 用户行为分析
+- **性能评估**：多维度并行评估模型表现
+- **代码审查**：语法检查 + 逻辑分析 + 安全扫描
+
+### 🗳️ **投票机制（Voting）**
+相同任务并行执行多次，获得多样化输出
+
+**应用场景：**
+- **代码生成**：多个版本对比选择最优
+- **创意生成**：多个方案投票选出最佳
+- **质量评估**：多角度评估减少误判
+
+</v-clicks>
+
+::right::
+
+## 💡 设计要点
+
+<v-clicks>
+
+### 🔧 **技术实现**
+```python
+# 分段处理示例
+def parallel_analysis(text):
+    tasks = [
+        analyze_sentiment(text),
+        check_grammar(text),
+        detect_toxicity(text)
+    ]
+    results = await asyncio.gather(*tasks)
+    return aggregate_results(results)
+
+# 投票机制示例
+def voting_generation(prompt):
+    responses = [
+        generate_response(prompt, model="gpt-4"),
+        generate_response(prompt, model="claude-3"),
+        generate_response(prompt, model="gemini-pro")
+    ]
+    return select_best_response(responses)
+```
+
+### ⚠️ **注意事项**
+- **成本控制**：并行调用增加成本
+- **结果一致性**：需要合理的聚合策略
+- **错误处理**：部分任务失败的处理机制
+
+</v-clicks>
+
+---
+layout: section
+class: text-center
+---
+# 🎭 编排者-工作者（Orchestrator-Workers）
+
+---
+layout: center
+class: text-center
+---
+# 🎯 编排者-工作者模式详解
+
+<div class="mt-8">
+  <div class="flex justify-center">
+    <img src="/ai-agent-images/orchestrator-workers-workflow.webp" alt="编排者-工作者工作流" class="max-w-4xl w-full h-auto rounded-lg shadow-lg" />
+  </div>
+</div>
+
+<div v-click class="mt-6 text-center">
+  <div class="text-lg text-gray-600 mb-2">中心式 LLM 动态分解任务并委托执行</div>
+  <div class="text-sm text-gray-500">灵活的任务分配和结果汇总机制</div>
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7
+---
+## 🎯 适用场景
+
+<v-clicks>
+
+### ✅ **理想条件**
+- 任务复杂度**无法预测**
+- 需要**动态调整**子任务
+- 子任务数量**不确定**
+
+### 📝 **典型应用**
+- **代码审查**：根据修改文件数量动态分配审查任务
+- **智能搜索**：多源信息收集和分析
+- **项目管理**：根据项目复杂度分配不同专家
+- **内容创作**：根据主题复杂度分配不同创作者
+
+</v-clicks>
+
+::right::
+
+## 💡 设计要点
+
+<v-clicks>
+
+### 🔧 **架构设计**
+```
+用户请求 → 编排者(Orchestrator)
+                ↓
+        任务分解和分配
+                ↓
+    ┌───────────┼───────────┐
+    ↓           ↓           ↓
+工作者A      工作者B      工作者C
+(专家1)      (专家2)      (专家3)
+    ↓           ↓           ↓
+        结果汇总和整合
+                ↓
+        最终输出给用户
+```
+
+### ⚠️ **注意事项**
+- **协调复杂性**：编排者需要智能的任务分解能力
+- **负载均衡**：合理分配任务避免某些工作者过载
+- **结果一致性**：确保不同工作者的输出风格统一
+
+</v-clicks>
+
+---
+layout: section
+class: text-center
+---
+# 🔍 评估者-优化者（Evaluator-Optimizer）
+
+---
+layout: center
+class: text-center
+---
+# 🔄 评估者-优化者模式详解
+
+<div class="mt-8">
+  <div class="flex justify-center">
+    <img src="/ai-agent-images/evaluator-optimizer-workflow.webp" alt="评估者-优化者工作流" class="max-w-4xl w-full h-auto rounded-lg shadow-lg" />
+  </div>
+</div>
+
+<div v-click class="mt-6 text-center">
+  <div class="text-lg text-gray-600 mb-2">生成-评估-优化的闭环改进机制</div>
+  <div class="text-sm text-gray-500">通过迭代反馈持续提升输出质量</div>
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7
+---
+## 🎯 适用场景
+
+<v-clicks>
+
+### ✅ **理想条件**
+- 有**明确的评估标准**
+- 迭代式改进**确实有效**
+- 能够**量化改进效果**
+
+### 📝 **典型应用**
+- **文学翻译**：翻译 → 质量评估 → 优化改进
+- **复杂搜索**：搜索 → 结果评估 → 调整策略
+- **代码生成**：生成代码 → 测试评估 → 修复问题
+- **创意写作**：初稿 → 质量评估 → 润色优化
+
+</v-clicks>
+
+::right::
+
+## 💡 设计要点
+
+<v-clicks>
+
+### 🔧 **工作流程**
+```
+1. 生成器：创建初始输出
+   ↓
+2. 评估器：分析输出质量
+   ↓
+3. 优化器：基于反馈改进
+   ↓
+4. 循环：重复直到满意
+```
+
+### 📊 **评估维度**
+- **准确性**：内容是否正确
+- **完整性**：是否覆盖所有要求
+- **一致性**：风格和格式是否统一
+- **创新性**：是否有独特见解
+
+</v-clicks>
+
+---
+layout: section
+class: text-center
+---
+# 🤖 AI Agent 设计原则
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7
+---
+## 🎯 Agent 设计三原则
+
+<v-clicks>
+
+### 1. **简洁性（Simplicity）**
+- 避免过度复杂的架构
+- 优先使用简单、可组合的模式
+- 从基础组件开始构建
+
+### 2. **透明性（Transparency）**
+- 明确显示 Agent 的规划和步骤
+- 提供清晰的决策过程
+- 让用户理解 Agent 在做什么
+
+### 3. **接口设计（Interface Design）**
+- 精心设计 Agent 与计算机的接口
+- 完善的文档和测试
+- 确保工具描述清晰准确
+
+</v-clicks>
+
+::right::
+
+## 💡 实践建议
+
+<v-clicks>
+
+### 🚀 **开发策略**
+- **首选直接使用 LLM API**：避免不必要的抽象层
+- **理解框架底层**：如果使用框架，确保理解其工作原理
+- **从简单开始**：逐步增加复杂性
+
+### ⚠️ **常见陷阱**
+- **过度工程化**：为了技术而技术
+- **抽象层过多**：难以调试和维护
+- **工具描述不清**：导致 Agent 使用效果差
+
+</v-clicks>
+
+<div v-click class="mt-6 p-4 bg-green-50 rounded-lg border-l-4 border-green-400 text-sm">
+💡 <strong>核心理念</strong>：成功的 Agent 不是最复杂的，而是最符合需求的
+</div>
+
+---
+layout: section
+class: text-center
+---
+# 🛠️ 工具设计最佳实践
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7
+---
+## 📝 工具描述工程
+
+<v-clicks>
+
+### 🎯 **输出格式选择**
+- **优先选择简单格式**：避免复杂的转义和解析
+- **保持一致性**：与互联网常见格式保持一致
+- **减少格式开销**：避免需要精确记录大量信息
+
+### 📋 **工具定义要点**
+```json
+{
+  "name": "search_web",
+  "description": "搜索最新网络信息，适用于获取实时数据",
+  "parameters": {
+    "query": "搜索关键词，支持中英文",
+    "lang": "语言代码，zh表示中文，en表示英文"
+  },
+  "examples": [
+    {
+      "input": {"query": "苹果股价", "lang": "zh"},
+      "output": "苹果公司(AAPL)当前股价为$195.32..."
+    }
+  ]
+}
+```
+
+</v-clicks>
+
+::right::
+
+## 🔧 防呆设计
+
+<v-clicks>
+
+### 🛡️ **错误预防**
+- **参数验证**：确保输入参数格式正确
+- **边界处理**：处理异常和边界情况
+- **默认值设置**：为可选参数提供合理默认值
+
+### 🧪 **测试策略**
+- **示例测试**：用典型输入测试工具
+- **边界测试**：测试极端情况
+- **错误测试**：验证错误处理机制
+
+### 📚 **文档要求**
+- **清晰描述**：像给新人写 docstring 一样详细
+- **示例丰富**：提供多种使用场景的示例
+- **界限明确**：明确与其他工具的区别
+
+</v-clicks>
+
+---
+layout: section
+class: text-center
+---
+# 🎯 实战案例：Coding Agent
+
+---
+layout: center
+class: text-center
+---
+# 💻 Coding Agent 架构解析
+
+<div class="mt-8">
+  <div class="flex justify-center">
+    <img src="/ai-agent-images/coding-agent.webp" alt="Coding Agent架构" class="max-w-4xl w-full h-auto rounded-lg shadow-lg" />
+  </div>
+</div>
+
+<div v-click class="mt-6 text-center">
+  <div class="text-lg text-gray-600 mb-2">Anthropic 的 SWE-bench 解决方案</div>
+  <div class="text-sm text-gray-500">仅根据 Pull Request 描述解决真实 GitHub 问题</div>
+</div>
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7
+---
+## 🎯 为什么 Coding Agent 特别有效？
+
+<v-clicks>
+
+### ✅ **理想环境**
+- **问题空间明确**：代码问题有清晰的结构
+- **结果可验证**：通过自动化测试验证解决方案
+- **反馈循环完整**：测试结果提供即时反馈
+- **质量可衡量**：输出质量可以客观评估
+
+### 🛠️ **核心能力**
+- **代码理解**：分析现有代码结构和逻辑
+- **问题诊断**：识别 bug 和性能问题
+- **解决方案生成**：编写修复代码
+- **测试验证**：运行测试确保修复有效
+
+</v-clicks>
+
+::right::
+
+## 💡 设计亮点
+
+<v-clicks>
+
+### 🔧 **工具设计**
+- **文件操作**：读取、修改、创建文件
+- **代码执行**：运行测试和验证
+- **版本控制**：Git 操作和分支管理
+- **搜索功能**：在代码库中查找相关信息
+
+### 🧠 **推理模式**
+- **问题分析**：理解 PR 描述和代码变更
+- **影响评估**：分析修改对系统的影响
+- **测试策略**：制定测试计划验证修复
+- **迭代优化**：基于测试结果改进方案
+
+</v-clicks>
+
+<div v-click class="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400 text-sm">
+💡 <strong>关键洞察</strong>：Coding Agent 的成功证明了在结构化、可验证的环境中，Agent 能够达到很高的性能水平
+</div>
+
+---
+layout: section
+class: text-center
+---
+# 🚀 未来趋势与展望
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7
+---
+## 🔮 技术发展趋势
+
+<v-clicks>
+
+### 🧠 **模型能力提升**
+- **推理能力增强**：更复杂的逻辑推理和规划
+- **工具使用优化**：更智能的工具选择和参数生成
+- **多模态融合**：文本、图像、音频的统一处理
+- **长期记忆**：更好的上下文管理和经验积累
+
+### 🛠️ **工具生态发展**
+- **MCP 标准化**：统一的工具集成协议
+- **工具市场**：丰富的第三方工具生态
+- **自动化部署**：一键部署和配置 Agent
+- **监控和调试**：更好的可观测性工具
+
+</v-clicks>
+
+::right::
+
+## 🎯 应用场景扩展
+
+<v-clicks>
+
+### 🏢 **企业应用**
+- **智能客服**：基于 usage-based pricing 的商业模式
+- **代码助手**：从补全到自主问题解决
+- **数据分析**：自动化数据洞察和报告生成
+- **项目管理**：智能任务分配和进度跟踪
+
+### 🏠 **个人应用**
+- **学习助手**：个性化学习计划和进度跟踪
+- **创作助手**：内容创作和创意生成
+- **生活助手**：日程管理、信息整理、决策支持
+- **健康助手**：健康监测和生活方式建议
+
+</v-clicks>
+
+---
+layout: section
+class: text-center
+---
+
+# 📚 学习资源与下一步
+
+---
+layout: two-cols
+layoutClass: gap-6
+class: text-left leading-7## 📖 推荐学习资源
+---
+
+<v-clicks>
+
+### 📚 **官方文档**
+- **Anthropic Cookbook**：官方示例和最佳实践
+- **Model Context Protocol**：工具集成标准
+- **LangGraph 文档**：工作流构建框架
+- **OpenAI Function Calling**：工具调用指南
+
+### 🛠️ **实践平台**
+- **Gemini AI Studio**：Google 的 Agent 构建平台
+- **Dify**：开源 LLM 应用开发平台
+- **n8n**：工作流自动化工具
+- **Vercel AI SDK**：快速构建 AI 应用
+
+</v-clicks>
+
+::right::
+
+## 🎯 实践建议
+
+<v-clicks>
+
+### 🚀 **学习路径**
+1. **从简单开始**：先掌握基础的工具调用
+2. **理解模式**：深入学习各种 Workflow 模式
+3. **动手实践**：构建自己的 Agent 项目
+4. **持续优化**：基于反馈不断改进
+
+### 💡 **项目想法**
+- **个人助手**：日程管理、邮件处理
+- **学习工具**：课程规划、知识测验
+- **工作助手**：报告生成、数据分析
+- **创意工具**：内容创作、设计灵感
+
+</v-clicks>
+
+<div v-click class="mt-6 p-4 bg-gradient-to-r from-blue-50 to-green-50 rounded-lg border border-gray-200">
+  <p class="text-center text-gray-700">
+    🎉 <strong>恭喜完成学习！</strong> 现在你已经掌握了 AI Agent 的核心概念和实践方法，可以开始构建自己的智能应用了！
+  </p>
+</div>
